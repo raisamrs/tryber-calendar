@@ -157,3 +157,7 @@ label {
 .select-holidays {
   background-color: rgb(0, 25, 51);
 }
+
+.unselect-holidays {
+  background-color: rgb(238, 238, 238);
+}

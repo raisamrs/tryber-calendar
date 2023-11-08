@@ -50,7 +50,6 @@ Importante: Esse botão também deve ter a lógica inversa. Ao ser clicado novam
 
 const holidayBtn = document.getElementById('btn-holiday');
 const arrHolidays = document.querySelectorAll('.holiday');
-const selectedHolidays = document.querySelector('.select-holidays');
 
 // 1. Verificar se a classe 'select-holidays' foi aplicada aos elementos que têm a classe 'holiday';
 // 1.1. Se TIVER a classe 'select-holidays': remover a classe 'select-holidays';
@@ -60,8 +59,10 @@ const handleClickBtn = () => {
   for (let i = 0; i < arrHolidays.length; i += 1) {
     if (arrHolidays[i].classList.contains('select-holidays')) {
       arrHolidays[i].classList.remove('select-holidays');
+      arrHolidays[i].classList.add('unselect-holidays');
     } else {
       arrHolidays[i].classList.add('select-holidays');
+      arrHolidays[i].classList.remove('unselect-holidays');
     }
   }
 };
