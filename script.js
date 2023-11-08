@@ -49,20 +49,20 @@ Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos
 Importante: Esse botão também deve ter a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial com a cor "rgb(238,238,238)". */
 
 const holidayBtn = document.getElementById('btn-holiday');
-let isHolidayBtnCLicked = false;
+const arrHolidays = document.querySelectorAll('.holiday');
+const selectedHolidays = document.querySelector('.select-holidays');
+
+// 1. Verificar se a classe 'select-holidays' foi aplicada aos elementos que têm a classe 'holiday';
+// 1.1. Se TIVER a classe 'select-holidays': remover a classe 'select-holidays';
+// 1.2. Se NÃO TIVER a classe 'select-holidays': adiciona a classe 'select-holidays'.
 
 const handleClickBtn = () => {
-  const arrHolidays = document.querySelectorAll('.holiday');
-  if (isHolidayBtnCLicked === true) {
-    for (let i = 0; i < arrHolidays.length; i += 1) {
-      arrHolidays[i].style.backgroundColor = 'transparent';
+  for (let i = 0; i < arrHolidays.length; i += 1) {
+    if (arrHolidays[i].classList.contains('select-holidays')) {
+      arrHolidays[i].classList.remove('select-holidays');
+    } else {
+      arrHolidays[i].classList.add('select-holidays');
     }
-    isHolidayBtnCLicked = false;
-  } else {
-    for (let i = 0; i < arrHolidays.length; i += 1) {
-      arrHolidays[i].style.backgroundColor = 'rgb(0, 25, 51)';
-    }
-  } isHolidayBtnCLicked = true;
+  }
 };
-
 holidayBtn.addEventListener('click', handleClickBtn);
