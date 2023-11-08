@@ -83,3 +83,31 @@ const handleClickBtnFriday = () => {
   }
 };
 fridayBtn.addEventListener('click', handleClickBtnFriday);
+
+/* Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar para 30px e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
+De olho na dica 👀: Você pode utilizar a propriedade event.target. De olho na dica 👀: O tamanho original do texto é 20px. */
+
+const arrDay = document.querySelectorAll('.day');
+
+const handleMouseoverDay = (event) => {
+  const target = event.target;
+  const dayStyle = window.getComputedStyle(target);
+  const fontSizeDay = dayStyle.getPropertyValue('font-size');
+  if (fontSizeDay === '20px') {
+    target.style.fontSize = '30px';
+  }
+};
+
+const handleMouseoutDay = (event) => {
+  const target = event.target;
+  const dayStyle = window.getComputedStyle(target);
+  const fontSizeDay = dayStyle.getPropertyValue('font-size');
+  if (fontSizeDay === '30px') {
+    target.style.fontSize = '20px';
+  }
+};
+
+for (let i = 0; i < arrDay.length; i += 1) {
+  arrDay[i].addEventListener('mouseout', handleMouseoutDay);
+  arrDay[i].addEventListener('mouseover', handleMouseoverDay);
+}

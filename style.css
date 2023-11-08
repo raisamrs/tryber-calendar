@@ -161,3 +161,13 @@ label {
 .unselect-holidays {
   background-color: rgb(238, 238, 238);
 }
+
+.day-zoom {
+  color: #777;
+  display: inline-block;
+  font-size:30px;
+  margin: 5px 0;
+  text-align: center;
+  vertical-align: middle;
+  width: 13.6%;
+}
