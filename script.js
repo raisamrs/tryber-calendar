@@ -51,11 +51,7 @@ Importante: Esse botão também deve ter a lógica inversa. Ao ser clicado novam
 const holidayBtn = document.getElementById('btn-holiday');
 const arrHolidays = document.querySelectorAll('.holiday');
 
-// 1. Verificar se a classe 'select-holidays' foi aplicada aos elementos que têm a classe 'holiday';
-// 1.1. Se TIVER a classe 'select-holidays': remover a classe 'select-holidays';
-// 1.2. Se NÃO TIVER a classe 'select-holidays': adiciona a classe 'select-holidays'.
-
-const handleClickBtn = () => {
+const handleClickBtnHoliday = () => {
   for (let i = 0; i < arrHolidays.length; i += 1) {
     if (arrHolidays[i].classList.contains('select-holidays')) {
       arrHolidays[i].classList.remove('select-holidays');
@@ -66,4 +62,24 @@ const handleClickBtn = () => {
     }
   }
 };
-holidayBtn.addEventListener('click', handleClickBtn);
+holidayBtn.addEventListener('click', handleClickBtnHoliday);
+
+/* Exercício 3 – Implemente uma função que modifica o texto exibido nos dias que são sextas-feiras
+Adicione ao botão "Sexta-feira" um evento de "click" e modifique o texto a ser exibido nos dias em que são sextas-feiras.
+
+Importante: Esse botão também deve ter a lógica inversa. Ao ser clicado novamente, ele retorna à configuração inicial e exibe os dias. */
+
+const fridayBtn = document.getElementById('btn-friday');
+const arrFridays = document.querySelectorAll('.friday');
+const arrFridaysNumbers = [4, 11, 18, 25];
+
+const handleClickBtnFriday = () => {
+  for (let i = 0; i < arrFridays.length; i += 1) {
+    if (arrFridays[i].outerText !== 'SEXTOU!') {
+      arrFridays[i].innerText = 'SEXTOU!';
+    } else {
+      arrFridays[i].innerText = arrFridaysNumbers[i];
+    }
+  }
+};
+fridayBtn.addEventListener('click', handleClickBtnFriday);
