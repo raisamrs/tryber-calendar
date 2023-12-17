@@ -13,7 +13,8 @@ const createDaysOfTheWeek = () => {
 
 createDaysOfTheWeek();
 
-const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
+  13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 // Escreva seu código abaixo.
 
@@ -28,19 +29,43 @@ function addDays() {
     daysElement.appendChild(newLi);
   }
 }
-function addClassesToDays() {
+/* function addClassesToDays() {
   for (let i = 0; i < decemberDaysList.length; i += 1) {
-    let liELement = document.getElementById('days').children[i];
+    const liELement = document.getElementById('days').children[i];
     if (decemberDaysList[i] === 24 || decemberDaysList[i] === 31) {
       liELement.classList.add('holiday');
-    } else if (decemberDaysList[i] === 4 || decemberDaysList[i] === 11 || decemberDaysList[i] === 18) {
+    } else if (decemberDaysList[i] === 4
+      || decemberDaysList[i] === 11
+      || decemberDaysList[i] === 18) {
       liELement.classList.add('friday');
     } else if (decemberDaysList[i] === 25) {
       liELement.classList.add('holiday');
       liELement.classList.add('friday');
     }
   }
+} */
+function addClassesToDays() {
+  const daysList = document.getElementById('days').children;
+
+  const holidayDays = [24, 31];
+  const fridayDays = [4, 11, 18];
+  const christmasDay = 25;
+
+  for (let i = 0; i < daysList.length; i += 1) {
+    const liElement = daysList[i];
+
+    if (holidayDays.includes(decemberDaysList[i])) {
+      liElement.classList.add('holiday');
+    } else if (fridayDays.includes(decemberDaysList[i])) {
+      liElement.classList.add('friday');
+    }
+
+    if (decemberDaysList[i] === christmasDay) {
+      liElement.classList.add('holiday', 'friday');
+    }
+  }
 }
+
 addDays();
 addClassesToDays();
 
@@ -90,7 +115,7 @@ De olho na dica 👀: Você pode utilizar a propriedade event.target. De olho na
 const arrDay = document.querySelectorAll('.day');
 
 const handleMouseoverDay = (event) => {
-  const target = event.target;
+  const { target } = event;
   const dayStyle = window.getComputedStyle(target);
   const fontSizeDay = dayStyle.getPropertyValue('font-size');
   if (fontSizeDay === '20px') {
@@ -99,7 +124,7 @@ const handleMouseoverDay = (event) => {
 };
 
 const handleMouseoutDay = (event) => {
-  const target = event.target;
+  const { target } = event;
   const dayStyle = window.getComputedStyle(target);
   const fontSizeDay = dayStyle.getPropertyValue('font-size');
   if (fontSizeDay === '30px') {
