@@ -1,11 +1,10 @@
-
 * {
   margin: 0;
 }
 
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #eee;
+  background-color: rgb (238, 238, 238);
 }
 
 button {
@@ -17,7 +16,7 @@ button {
 }
 
 .buttons-container {
-  background-color: #eee;
+  background-color: rgb (238, 238, 238);
   display: inline-block;
   text-align: center;
   width: 100%;
@@ -27,10 +26,26 @@ button {
   margin: 0;
 }
 
-#days li {
-  color: #777;
+.week-days li {
+  color: rgb (102, 102, 102);
   display: inline-block;
-  font-size:20px;
+  text-align: center;
+  vertical-align: middle;
+  width: 13.6%;
+}
+
+.month-container ul li {
+  color: white;
+  font-size: 20px;
+  letter-spacing: 3px;
+  list-style-type: none;
+  text-transform: uppercase;
+}
+
+#days li {
+  color: rgb (119, 119, 119);
+  display: inline-block;
+  font-size: 20px;
   margin: 5px 0;
   text-align: center;
   vertical-align: middle;
@@ -48,7 +63,7 @@ input {
 }
 
 label {
-  color: #666;
+  color: rgb (102, 102, 102);
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -59,14 +74,6 @@ label {
   background: green;
   padding: 40px 25px;
   text-align: center;
-}
-
-.month-container ul li {
-  color:white;
-  font-size: 20px;
-  letter-spacing: 3px;
-  list-style-type: none;
-  text-transform: uppercase;
 }
 
 .my-tasks {
@@ -94,7 +101,7 @@ label {
 }
 
 .my-tasks span {
-  color: #666;
+  color: rgb (102, 102, 102);
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 3px;
@@ -110,7 +117,7 @@ label {
 }
 
 .tasks-container h3 {
-  color: #666;
+  color: rgb (102, 102, 102);
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -129,7 +136,7 @@ label {
 .task-list-container ul {
   list-style-type: none;
   padding: 0;
-  color: #666;
+  color: rgb (102, 102, 102);
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -140,17 +147,9 @@ label {
   margin-left: 35px;
 }
 
-.week-days li {
-  color: #666;
-  display: inline-block;
-  text-align: center;
-  vertical-align: middle;
-  width: 13.6%;
-}
-
 .week-days {
   font-size: 20px;
-  margin: 0px;
+  margin: 0;
   padding: 10px 0;
 }
 
@@ -163,9 +162,9 @@ label {
 }
 
 .day-zoom {
-  color: #777;
+  color: rgb (119, 119, 119);
   display: inline-block;
-  font-size:30px;
+  font-size: 30px;
   margin: 5px 0;
   text-align: center;
   vertical-align: middle;
