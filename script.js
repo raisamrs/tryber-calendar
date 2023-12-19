@@ -13,61 +13,75 @@ const createDaysOfTheWeek = () => {
 
 createDaysOfTheWeek();
 
-const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12,
-  13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
+  14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
 
 // Escreva seu código abaixo.
 
 /* Exercício 1 – Crie um calendário dinamicamente
 O array decemberDaysList contém os dois últimos dias de novembro e os dias do mês de dezembro. Sua função deve criar dinamicamente cada dia do calendário e os adicionar dentro da tag ul. */
+
+function createDayElement(day) {
+  const newLi = document.createElement('li');
+  newLi.innerText = day;
+  newLi.classList.add('day');
+  return newLi;
+}
+
 function addDays() {
   const daysElement = document.querySelector('#days');
-  for (let i = 0; i < decemberDaysList.length; i += 1) {
-    const newLi = document.createElement('li');
-    newLi.innerText = decemberDaysList[i];
-    newLi.classList.add('day');
+  for (const day of decemberDaysList) {
+    const newLi = createDayElement(day);
     daysElement.appendChild(newLi);
   }
 }
-/* function addClassesToDays() {
-  for (let i = 0; i < decemberDaysList.length; i += 1) {
-    const liELement = document.getElementById('days').children[i];
-    if (decemberDaysList[i] === 24 || decemberDaysList[i] === 31) {
-      liELement.classList.add('holiday');
-    } else if (decemberDaysList[i] === 4
-      || decemberDaysList[i] === 11
-      || decemberDaysList[i] === 18) {
-      liELement.classList.add('friday');
-    } else if (decemberDaysList[i] === 25) {
-      liELement.classList.add('holiday');
-      liELement.classList.add('friday');
-    }
-  }
-} */
-function addClassesToDays() {
-  const daysList = document.getElementById('days').children;
 
-  const holidayDays = [24, 31];
-  const fridayDays = [4, 11, 18];
-  const christmasDay = 25;
+function markAsHoliday(element) {
+  element.classList.add('holiday');
+}
 
-  for (let i = 0; i < daysList.length; i += 1) {
-    const liElement = daysList[i];
+function markAsFriday(element) {
+  element.classList.add('friday');
+}
 
-    if (holidayDays.includes(decemberDaysList[i])) {
-      liElement.classList.add('holiday');
-    } else if (fridayDays.includes(decemberDaysList[i])) {
-      liElement.classList.add('friday');
-    }
+function markAsHolidayAndFriday(element) {
+  markAsHoliday(element);
+  markAsFriday(element);
+}
 
-    if (decemberDaysList[i] === christmasDay) {
-      liElement.classList.add('holiday', 'friday');
-    }
+function markClassesForDay(element, day) {
+  const specialDays = {
+    24: markAsHoliday,
+    25: markAsHolidayAndFriday,
+    31: markAsHoliday,
+    4: markAsFriday,
+    11: markAsFriday,
+    18: markAsFriday,
+  };
+
+  const markFunction = specialDays[day];
+  if (markFunction) {
+    markFunction(element);
   }
 }
 
-addDays();
-addClassesToDays();
+function addClassesToDays() {
+  const daysElement = document.querySelector('#days');
+  const dayElements = daysElement.children;
+
+  for (let i = 0; i < decemberDaysList.length; i += 1) {
+    const currentDay = decemberDaysList[i];
+    const liElement = dayElements[i];
+    markClassesForDay(liElement, currentDay);
+  }
+}
+
+function initializeCalendar() {
+  addDays();
+  addClassesToDays();
+}
+
+initializeCalendar();
 
 /* Exercício 2 – Implemente uma função que muda a cor de fundo dos dias que possuem a classe "holiday"
 Adicione ao botão "Feriados" um evento de "click" que altere a cor de fundo dos dias que possuem a classe "holiday".
@@ -75,14 +89,15 @@ Importante: Esse botão também deve ter a lógica inversa. Ao ser clicado novam
 
 const holidayBtn = document.getElementById('btn-holiday');
 const arrHolidays = document.querySelectorAll('.holiday');
+const selectHolidays = 'select-holidays';
 
 const handleClickBtnHoliday = () => {
   for (let i = 0; i < arrHolidays.length; i += 1) {
-    if (arrHolidays[i].classList.contains('select-holidays')) {
-      arrHolidays[i].classList.remove('select-holidays');
+    if (arrHolidays[i].classList.contains(selectHolidays)) {
+      arrHolidays[i].classList.remove(selectHolidays);
       arrHolidays[i].classList.add('unselect-holidays');
     } else {
-      arrHolidays[i].classList.add('select-holidays');
+      arrHolidays[i].classList.add(selectHolidays);
       arrHolidays[i].classList.remove('unselect-holidays');
     }
   }
@@ -114,8 +129,7 @@ De olho na dica 👀: Você pode utilizar a propriedade event.target. De olho na
 
 const arrDay = document.querySelectorAll('.day');
 
-const handleMouseoverDay = (event) => {
-  const { target } = event;
+const handleMouseoverDay = ({ target }) => {
   const dayStyle = window.getComputedStyle(target);
   const fontSizeDay = dayStyle.getPropertyValue('font-size');
   if (fontSizeDay === '20px') {
@@ -123,8 +137,7 @@ const handleMouseoverDay = (event) => {
   }
 };
 
-const handleMouseoutDay = (event) => {
-  const { target } = event;
+const handleMouseoutDay = ({ target }) => {
   const dayStyle = window.getComputedStyle(target);
   const fontSizeDay = dayStyle.getPropertyValue('font-size');
   if (fontSizeDay === '30px') {
