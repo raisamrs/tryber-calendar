@@ -1,18 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap') ;
+
 * {
   margin: 0;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Lato, sans-serif;
   background-color: rgb (238, 238, 238);
 }
 
 button {
   margin: 20px;
+  border-radius: 20px;
+  width: 10%;
+  height: 30px;
+  font-size: 20px;
 }
 
 #btn-add {
   margin: 0;
+  width: 15%;
 }
 
 .buttons-container {
@@ -154,7 +161,7 @@ label {
 }
 
 .select-holidays {
-  background-color: rgb(0, 25, 51);
+  background-color: rgb(83, 132, 185);
 }
 
 .unselect-holidays {
@@ -169,4 +176,10 @@ label {
   text-align: center;
   vertical-align: middle;
   width: 13.6%;
+}
+
+#task-input {
+  width: 30%;
+  height: 30px;
+  border-radius: 15px;
 }

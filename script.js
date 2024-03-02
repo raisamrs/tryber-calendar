@@ -149,3 +149,64 @@ for (let i = 0; i < arrDay.length; i += 1) {
   arrDay[i].addEventListener('mouseout', handleMouseoutDay);
   arrDay[i].addEventListener('mouseover', handleMouseoverDay);
 }
+
+/* Exercício 5 - Implemente uma função que seleciona uma tarefa e atribua a cor da tarefa ao dia do calendário */
+
+const taskColors = document.querySelectorAll('.task');
+
+// Adiciona evento de clique para selecionar a cor da tarefa
+taskColors.forEach((taskColor) => {
+  taskColor.addEventListener('click', () => {
+    // Remove a classe 'selected' de todas as cores de tarefa
+    taskColors.forEach((color) => color.classList.remove('selected'));
+    // Adiciona a classe 'selected' à cor da tarefa clicada
+    taskColor.classList.add('selected');
+  });
+});
+
+// Adiciona evento de clique para atribuir cor ao texto do dia do mês
+const daysOfMonth = document.querySelectorAll('.day');
+
+daysOfMonth.forEach((day) => {
+  day.addEventListener('click', () => {
+    const selectedColor = document.querySelector('.selected');
+    const selectedColorStyle = window.getComputedStyle(selectedColor);
+    const textColor = selectedColorStyle.getPropertyValue('background-color');
+    if (day.style.color !== textColor) {
+      day.style.color = textColor;
+    } else {
+      day.style.color = 'rgb(119,119,119)';
+    }
+  });
+});
+
+// Função para adicionar uma nova tarefa à lista
+function addTask() {
+  const taskInput = document.getElementById('task-input');
+  const taskText = taskInput.value.trim();
+
+  // Verifica se o campo de entrada não está vazio
+  if (taskText !== '') {
+    const taskList = document.getElementById('task-list');
+    const newTaskItem = document.createElement('li');
+    newTaskItem.textContent = taskText;
+    taskList.appendChild(newTaskItem);
+    taskInput.value = ''; // Limpa o campo de entrada após adicionar a tarefa
+  } else {
+    alert('Por favor, insira um texto para a tarefa!');
+  }
+}
+// Adiciona evento de clique ao botão 'Adicionar'
+const addButton = document.getElementById('btn-add');
+addButton.addEventListener('click', addTask);
+
+// Adiciona evento de tecla pressionada ao campo de entrada 'task-input'
+const taskInput = document.getElementById('task-input');
+
+function handleKeyPress(event) {
+  // Verifica se a tecla pressionada é 'Enter' (código 13)
+  if (event.key === 'Enter') {
+    addTask();
+  }
+}
+taskInput.addEventListener('keypress', handleKeyPress);
