@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="style.css">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Calendar</title>
+  <title>Calendário Trybe 🗓️</title>
 </head>
 
 <body>
@@ -30,11 +30,15 @@
   <section class="tasks-container">
     <div class="my-tasks">
       <h3>MINHAS TAREFAS</h3>
-      <span>projeto</span>
-      <div class="task" style="background-color: rgb(0, 128, 0);"></div>
+      <div class="project-container">
+        <div class="task" id="task-project"></div>
+        <span>projeto</span>
+      </div>
       <br>
-      <span>exercícios</span>
-      <div class="task" style="background-color: rgb(255, 0, 0);"></div>
+      <div class="exercises-container">
+        <div class="task" id="task-exercises"></div>
+        <span>exercícios</span>
+      </div>
     </div>
     <div class="input-container">
       <h3>COMPROMISSOS</h3>
@@ -42,11 +46,11 @@
       <input type="text" id="task-input" placeholder="Escreva seu compromisso">
       <button id="btn-add">Adicionar</button>
     </div>
-    <div class="task-list-container">
-      <ul id="task-list">
-      </ul>
-    </div>
   </section>
+  <div class="task-list-container">
+    <ul id="task-list">
+    </ul>
+  </div>
   <script src="script.js"></script>
 </body>
 
