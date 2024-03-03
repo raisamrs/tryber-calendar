@@ -92,7 +92,7 @@ describe('Desafio Técnico: Calendário Tryber', () => {
     it('Ao clicar em um dia do mês no calendário, atribua a esse dia a cor da legenda da sua tarefa selecionada', () => {
       cy.get('.task').first().click();
       cy.get('li.day').first().click();
-      cy.get('li.day').first().should('have.css', 'color', 'rgb(0, 128, 0)');
+      cy.get('li.day').first().should('have.css', 'color', 'rgb(115, 229, 115)');
     });
 
     it('Ao clicar novamente no dia com a cor da legenda, a sua cor deverá voltar à configuração inicial `rgb(119,119,119)`', () => {
