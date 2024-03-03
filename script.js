@@ -157,10 +157,15 @@ const taskColors = document.querySelectorAll('.task');
 // Adiciona evento de clique para selecionar a cor da tarefa
 taskColors.forEach((taskColor) => {
   taskColor.addEventListener('click', () => {
-    // Remove a classe 'selected' de todas as cores de tarefa
-    taskColors.forEach((color) => color.classList.remove('selected'));
-    // Adiciona a classe 'selected' à cor da tarefa clicada
-    taskColor.classList.add('selected');
+    // Verifica se a tarefa já está selecionada
+    if (taskColor.classList.contains('selected')) {
+      taskColor.classList.remove('selected');
+    } else {
+      // Remove a classe 'selected' de todas as cores de tarefa
+      taskColors.forEach((color) => color.classList.remove('selected'));
+      // Adiciona a classe 'selected' à cor da tarefa clicada
+      taskColor.classList.add('selected');
+    }
   });
 });
 
