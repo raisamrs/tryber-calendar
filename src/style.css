@@ -1,20 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap') ;
 
 * {
+  border: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
-  font-family: Lato, sans-serif;
   background-color: rgb (238, 238, 238);
-}
-
-button {
-  margin: 20px;
-  border-radius: 20px;
-  width: 10%;
-  height: 30px;
-  font-size: 20px;
+  font-family: Lato, sans-serif;
 }
 
 #btn-add {
@@ -31,56 +25,81 @@ button {
 
 #days {
   margin: 0;
+  display: flex;
 }
 
-.week-days li {
-  color: rgb (102, 102, 102);
-  display: inline-block;
+#task-another {
+  background-color: rgb(222, 55, 208);
+}
+
+#task-exercises {
+  background-color: rgb(232, 103, 47);
+}
+
+#task-input {
+  border-radius: 15px;
+  height: 30px;
+  width: 30%;
+}
+
+#task-job {
+  background-color: rgb(130, 49, 207);
+}
+
+#task-leisure {
+  background-color: rgb(235, 199, 37);
+}
+
+#task-project {
+  background-color: rgb(115, 229, 115);
+}
+
+.day {
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  margin: 5px 0;
   text-align: center;
   vertical-align: middle;
-  width: 13.6%;
+  width: 10vw;
 }
 
-.month-container ul li {
-  color: white;
-  font-size: 20px;
-  letter-spacing: 3px;
-  list-style-type: none;
-  text-transform: uppercase;
-}
-
-#days li {
-  color: rgb (119, 119, 119);
+.day-zoom {
+  color: rgb(119, 119, 119);
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   margin: 5px 0;
   text-align: center;
   vertical-align: middle;
   width: 13.6%;
 }
 
-.input-container {
+.days-container {
+  margin-left: 1vw;
+}
+
+.div {
   display: flex;
-  width: 49%;
-  height: 200px;
-  flex-direction: column;
+}
+
+.input-container {
   align-items: center;
-  gap: 5%;
+  column-gap: 5%;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  width: 49%;
 }
 
-input {
-  margin-top: 8px;
-}
-
-label {
+.label {
   color: rgb (102, 102, 102);
   font-size: 22px;
   font-weight: 600;
   letter-spacing: 2px;
-  vertical-align: middle;
-  position: absolute;
-  margin-top: 3.4%;
   margin-right: 20%;
+  margin-top: 3.4%;
+  position: absolute;
+  vertical-align: middle;
 }
 
 .month-container {
@@ -90,17 +109,17 @@ label {
 }
 
 .my-tasks {
+  align-items: center;
   border: 1px solid red;
+  clear: both;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  clear: both;
   float: left;
   height: 35vh;
+  justify-content: center;
   vertical-align: middle;
   width: 49%;
-  cursor: pointer;
 }
 
 .my-tasks div div {
@@ -120,15 +139,42 @@ label {
 }
 
 .my-tasks span {
-  display: flex;
-  flex-direction: row;
   color: rgb (102, 102, 102);
+  display: flex;
   font-size: 18px;
   font-weight: 500;
+  justify-content: center;
   letter-spacing: 3px;
   padding-bottom: 10px;
   vertical-align: middle;
+}
 
+.project-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.select-holidays {
+  background-color: rgb(136, 145, 155);
+}
+
+.task-list-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-left: 50%;
+  margin-right: 0.8%;
+  margin-top: 40px;
+}
+
+.task-list-container ul {
+  color: rgb(102, 102, 102);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 2px;
+  list-style-type: none;
+  padding: 0;
+  vertical-align: middle;
 }
 
 .tasks-container {
@@ -144,97 +190,47 @@ label {
   color: rgb(102, 102, 102);
   font-size: 18px;
   font-weight: 500;
+  letter-spacing: 3px;
   margin-bottom: 20px;
   text-decoration: underline;
-  letter-spacing: 3px;
 }
 
-.task-list {
-  margin-top: 20px;
-}
-
-.task-list-container {
-  margin-top: 40px;
+.text-and-color {
+  border: 1px solid yellowgreen;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-left: 50%;
-  margin-right: 0.8%;
 }
 
-.task-list-container ul {
-  list-style-type: none;
-  padding: 0;
-  color: rgb(102, 102, 102);
-  font-size: 18px;
-  font-weight: 500;
-  letter-spacing: 2px;
-  vertical-align: middle;
-}
-
-.week-days-container {
-  margin-left: 35px;
-}
-
-.week-days {
-  font-size: 1.4vw;
-  font-weight: 600;
-  margin: 0;
-  padding: 10px 0;
-}
-
-.select-holidays {
-  background-color: rgb(136, 145, 155);
+.type-tasks-container {
+  border: 1px solid blue;
+  display: flex;
+  flex-direction: row;
 }
 
 .unselect-holidays {
   background-color: rgb(238, 238, 238);
 }
 
-.day-zoom {
-  color: rgb(119, 119, 119);
-  display: inline-block;
-  font-size: 30px;
-  margin: 5px 0;
-  text-align: center;
-  vertical-align: middle;
-  width: 13.6%;
-}
-
-#task-input {
-  width: 30%;
-  height: 30px;
-  border-radius: 15px;
-}
-
-input::placeholder , textarea::placeholder {
-  text-align: center;
-  font-size: 18px;
-}
-
-.exercises-container .project-container {
-  width: 100%;
+.week-days {
+  border: 1px solid blue;
   display: flex;
   flex-direction: row;
+  font-size: 1.4vw;
+  font-weight: 600;
+  justify-content: space-around;
+  margin: 1vw;
+  padding: 10px 0;
+}
+
+.week-days li {
+  border: 1px solid green;
+  color: rgb(102, 102, 102);
+  display: flex;
   justify-content: center;
+  margin: 1vw;
+  text-align: center;
+  width: 10vw;
 }
 
-#task-exercises {
-  background-color: rgb(232, 103, 47);
-}
-
-#task-project {
-  background-color: rgb(115, 229, 115);
-}
-
-#task-job {
-  background-color: rgb(130, 49, 207);
-}
-
-#task-leisure {
-  background-color: rgb(235, 199, 37);
-}
-
-#task-another {
-  background-color: rgb(222, 55, 208);
+.week-days-container {
+  margin-left: 35px;
 }

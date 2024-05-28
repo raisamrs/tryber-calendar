@@ -11,6 +11,7 @@ const createDaysOfTheWeek = () => {
   }
 };
 
+const bgColor = 'background-color';
 createDaysOfTheWeek();
 
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
@@ -176,7 +177,7 @@ daysOfMonth.forEach((day) => {
   day.addEventListener('click', () => {
     const selectedColor = document.querySelector('.selected');
     const selectedColorStyle = window.getComputedStyle(selectedColor);
-    const textColor = selectedColorStyle.getPropertyValue('background-color');
+    const textColor = selectedColorStyle.getPropertyValue(bgColor);
     if (day.style.color !== textColor) {
       day.style.color = textColor;
     } else {
@@ -185,20 +186,44 @@ daysOfMonth.forEach((day) => {
   });
 });
 
+const taskType = document.querySelectorAll('.task');
+
+taskType.forEach((type) => {
+  type.addEventListener('click', () => {
+    const taskTypeChosen = document.querySelector('.selected');
+    const typeSelected = document.getElementById('selected-task');
+    if (taskTypeChosen) {
+      const taskChosenColorStyle = window.getComputedStyle(taskTypeChosen);
+      const taskColor = taskChosenColorStyle.getPropertyValue(bgColor);
+      typeSelected.style.backgroundColor = taskColor;
+    } else {
+      typeSelected.style.color = 'rgb(255, 255, 255)';
+    }
+  });
+});
+
 // Função para adicionar uma nova tarefa à lista
 function addTask() {
   const taskInput = document.getElementById('task-input');
   const taskText = taskInput.value.trim();
+  const selectedTask = document.querySelector('.task.selected');
 
   // Verifica se o campo de entrada não está vazio
-  if (taskText !== '') {
+  if (taskText !== '' && selectedTask) {
     const taskList = document.getElementById('task-list');
     const newTaskItem = document.createElement('li');
     newTaskItem.textContent = taskText;
+
+    const selectedColorStyle = window.getComputedStyle(selectedTask);
+    const taskColor = selectedColorStyle.getPropertyValue(bgColor);
+    newTaskItem.style.color = taskColor;
+
     taskList.appendChild(newTaskItem);
     taskInput.value = ''; // Limpa o campo de entrada após adicionar a tarefa
+  } else if (!selectedTask) {
+    alert('Por favor, selecione um tipo de tarefa!');
   } else {
-    alert('Por favor, insira um texto para a tarefa!');
+    alert('Por favor, insira uma tarefa!');
   }
 }
 // Adiciona evento de clique ao botão 'Adicionar'
