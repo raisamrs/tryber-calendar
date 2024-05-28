@@ -43,7 +43,7 @@ Você pode usar o [Visual Studio Code (vulgo VS Code)](https://code.visualstudio
 ![Go Live](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/Live%20Server.png)
 
 ## Versão Deploy:
-Acesse a aplicação em https://raisamrs.github.io/pixels-art/
+Acesse a aplicação em https://raisamrs.github.io/tryber-calendar/
 
 ## Autora
 
