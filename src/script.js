@@ -1,7 +1,6 @@
 const createDaysOfTheWeek = () => {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
   const weekDaysList = document.querySelector('.week-days');
-
   for (let index = 0; index < weekDays.length; index += 1) {
     const days = weekDays[index];
     const dayListItem = document.createElement('li');
@@ -77,9 +76,27 @@ function addClassesToDays() {
   }
 }
 
+function addEventListenersToDays() {
+  const arrDay = document.querySelectorAll('.day');
+
+  const handleMouseoverDay = ({ target }) => {
+    target.style.fontSize = '1.5vw';
+  };
+
+  const handleMouseoutDay = ({ target }) => {
+    target.style.fontSize = '1vw';
+  };
+
+  arrDay.forEach((day) => {
+    day.addEventListener('mouseover', handleMouseoverDay);
+    day.addEventListener('mouseout', handleMouseoutDay);
+  });
+}
+
 function initializeCalendar() {
   addDays();
   addClassesToDays();
+  addEventListenersToDays();
 }
 
 initializeCalendar();
@@ -128,29 +145,6 @@ fridayBtn.addEventListener('click', handleClickBtnFriday);
 /* Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar para 30px e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 De olho na dica 👀: Você pode utilizar a propriedade event.target. De olho na dica 👀: O tamanho original do texto é 20px. */
 
-const arrDay = document.querySelectorAll('.day');
-
-const handleMouseoverDay = ({ target }) => {
-  const dayStyle = window.getComputedStyle(target);
-  const fontSizeDay = dayStyle.getPropertyValue('font-size');
-  if (fontSizeDay === '20px') {
-    target.style.fontSize = '30px';
-  }
-};
-
-const handleMouseoutDay = ({ target }) => {
-  const dayStyle = window.getComputedStyle(target);
-  const fontSizeDay = dayStyle.getPropertyValue('font-size');
-  if (fontSizeDay === '30px') {
-    target.style.fontSize = '20px';
-  }
-};
-
-for (let i = 0; i < arrDay.length; i += 1) {
-  arrDay[i].addEventListener('mouseout', handleMouseoutDay);
-  arrDay[i].addEventListener('mouseover', handleMouseoverDay);
-}
-
 /* Exercício 5 - Implemente uma função que seleciona uma tarefa e atribua a cor da tarefa ao dia do calendário */
 
 const taskColors = document.querySelectorAll('.task');
@@ -176,12 +170,16 @@ const daysOfMonth = document.querySelectorAll('.day');
 daysOfMonth.forEach((day) => {
   day.addEventListener('click', () => {
     const selectedColor = document.querySelector('.selected');
-    const selectedColorStyle = window.getComputedStyle(selectedColor);
-    const textColor = selectedColorStyle.getPropertyValue(bgColor);
-    if (day.style.color !== textColor) {
-      day.style.color = textColor;
+    if (selectedColor) {
+      const selectedColorStyle = window.getComputedStyle(selectedColor);
+      const textColor = selectedColorStyle.getPropertyValue(bgColor);
+      if (day.style.color !== textColor) {
+        day.style.color = textColor;
+      } else {
+        day.style.color = 'rgb(119,119,119)';
+      }
     } else {
-      day.style.color = 'rgb(119,119,119)';
+      alert('Por favor, selecione uma tarefa antes de atribuir uma cor.');
     }
   });
 });

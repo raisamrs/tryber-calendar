@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap') ;
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 * {
   border: 0;
@@ -7,8 +7,17 @@
 }
 
 body {
-  background-color: rgb (238, 238, 238);
+  background-color: rgb(238, 238, 238);
   font-family: Lato, sans-serif;
+  overflow-x: hidden;
+}
+
+h4 {
+  margin: 2vh 0;
+}
+
+ul {
+  list-style-type: none;
 }
 
 #btn-add {
@@ -16,16 +25,28 @@ body {
   width: 15%;
 }
 
-.buttons-container {
-  background-color: rgb (238, 238, 238);
-  display: inline-block;
-  text-align: center;
+#days {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
   width: 100%;
 }
 
-#days {
-  margin: 0;
+#selected-type {
+  margin: 1vh;
+  height: 6vh;
+  width: 6vh;
+}
+
+#selected-type-container {
+  align-content: center;
+  align-items: center;
+/*   border: 1px solid darkslategrey; */
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 18rem;
+  margin: 2%;
 }
 
 #task-another {
@@ -37,8 +58,8 @@ body {
 }
 
 #task-input {
-  border-radius: 15px;
-  height: 30px;
+  border-radius: 0.8rem;
+  height: 3vh;
   width: 30%;
 }
 
@@ -54,28 +75,37 @@ body {
   background-color: rgb(115, 229, 115);
 }
 
+.buttons-container {
+  background-color: rgb(238, 238, 238);
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
+
 .day {
-  display: flex;
-  flex-direction: row;
-  font-size: 20px;
-  margin: 5px 0;
+  box-sizing: border-box;
+  flex: 0 0 calc(100% / 7);
+  font-size: 1vw;
+  height: 3vw;
+  line-height: 2.5vw;
   text-align: center;
   vertical-align: middle;
-  width: 10vw;
+}
+
+.days-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 72vw;
 }
 
 .day-zoom {
   color: rgb(119, 119, 119);
   display: inline-block;
-  font-size: 30px;
-  margin: 5px 0;
+  font-size: 2vw;
+  margin: 0.5vw 0;
   text-align: center;
   vertical-align: middle;
   width: 13.6%;
-}
-
-.days-container {
-  margin-left: 1vw;
 }
 
 .div {
@@ -87,15 +117,15 @@ body {
   column-gap: 5%;
   display: flex;
   flex-direction: column;
-  height: 200px;
+  height: 10vh;
   width: 49%;
 }
 
 .label {
-  color: rgb (102, 102, 102);
-  font-size: 22px;
+  color: rgb(102, 102, 102);
+  font-size: 1.2rem;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 0.1rem;
   margin-right: 20%;
   margin-top: 3.4%;
   position: absolute;
@@ -104,48 +134,53 @@ body {
 
 .month-container {
   background: green;
-  padding: 40px 25px;
+  padding: 4vh 2vw;
   text-align: center;
 }
 
 .my-tasks {
-  align-items: center;
-  border: 1px solid red;
+  align-items: flex-start;
+  /*   border: 2px dashed darkmagenta; */
   clear: both;
   cursor: pointer;
   display: flex;
   flex-direction: column;
   float: left;
-  height: 35vh;
+  height: 25vh;
   justify-content: center;
   vertical-align: middle;
-  width: 49%;
+  width: 100%;
+}
+
+.my-tasks div div , #selected-type {
+  border: 0.1vw solid black;
+  border-radius: 50%;
+  box-shadow: 0 0.2rem 0.4rem 0 rgba(0, 0, 0, 0.2), 0 0.3rem 1rem 0 rgba(0, 0, 0, 0.19);
+  display: inline-block;
+  margin-right: 2%;
+  vertical-align: middle;
+ 
 }
 
 .my-tasks div div {
-  border: 1px solid black;
-  border-radius: 100%;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  display: inline-block;
-  height: 35px;
-  margin-right: 2%;
-  vertical-align: middle;
-  width: 35px;
+  height: 3.5vh;
+  width: 3.5vh;
 }
 
 .my-tasks div div:active {
-  height: 45px;
-  width: 45px;
+  height: 4.5vh;
+  width: 4.5vh;
 }
 
 .my-tasks span {
-  color: rgb (102, 102, 102);
+  color: rgb(102, 102, 102);
   display: flex;
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
   justify-content: center;
-  letter-spacing: 3px;
-  padding-bottom: 10px;
+  letter-spacing: 0.2rem;
+  padding-bottom: 1vh;
+  padding-left: 1vw;
   vertical-align: middle;
 }
 
@@ -164,46 +199,57 @@ body {
   flex-direction: column;
   margin-left: 50%;
   margin-right: 0.8%;
-  margin-top: 40px;
+  margin-top: 4vh;
 }
 
 .task-list-container ul {
   color: rgb(102, 102, 102);
-  font-size: 18px;
+  font-size: 1rem;
   font-weight: 500;
-  letter-spacing: 2px;
-  list-style-type: none;
+  letter-spacing: 0.1rem;
   padding: 0;
   vertical-align: middle;
 }
 
 .tasks-container {
+  border: 1px solid black;
   display: flex;
   flex-direction: row;
-  height: 130px;
-  justify-content: center;
+  height: 57vh;
+  justify-content: start;
   text-align: center;
   width: 100%;
 }
 
-.tasks-container h3 {
+.tasks-container h3 , #selected-type-container {
   color: rgb(102, 102, 102);
-  font-size: 18px;
+  font-size: 1.3rem;
   font-weight: 500;
-  letter-spacing: 3px;
-  margin-bottom: 20px;
+  letter-spacing: 0.2rem;
   text-decoration: underline;
 }
 
 .text-and-color {
-  border: 1px solid yellowgreen;
+  align-items: center;
+  /*   border: 0.1vw solid yellowgreen; */
   display: flex;
+  flex-direction: row;
+  margin-bottom: 1vh;
+  width: 100%;
+}
+
+.title-type-tasks {
+  margin-bottom: 3vh;
+  /* border: 1px solid red; */
 }
 
 .type-tasks-container {
-  border: 1px solid blue;
+/*   border: 1px solid blue; */
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  height: 18rem;
+  width: 21vw;
+  margin: 2%;
 }
 
 .unselect-holidays {
@@ -211,26 +257,18 @@ body {
 }
 
 .week-days {
-  border: 1px solid blue;
   display: flex;
   flex-direction: row;
   font-size: 1.4vw;
   font-weight: 600;
-  justify-content: space-around;
-  margin: 1vw;
-  padding: 10px 0;
+  width: 72vw;
 }
 
 .week-days li {
-  border: 1px solid green;
   color: rgb(102, 102, 102);
   display: flex;
+  flex: 0 0 calc(100% / 7);
   justify-content: center;
-  margin: 1vw;
+  padding-bottom: 3vh;
   text-align: center;
-  width: 10vw;
-}
-
-.week-days-container {
-  margin-left: 35px;
 }

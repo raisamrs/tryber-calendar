@@ -7,8 +7,8 @@
     "cypress:open": "cypress open",
     "test": "cypress run",
     "cy:browser": "cypress run --headless --browser chrome",
-    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx",
-    "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input",
+    "lint": "eslint --no-inline-config --no-error-on-unmatched-pattern -c .eslintrc.json . --ext .js, .jsx --fix",
+    "lint:styles": "stylelint **/*.css --config .stylelintrc.json --ignore-disables --allow-empty-input --fix",
     "deploy": "gh-pages -d src"
   },
   "repository": {

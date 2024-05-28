@@ -28,14 +28,15 @@
     <button id="btn-friday">Sexta-feira</button>
   </div>
   <section class="tasks-container">
-    <div class="my-tasks">
-      <h3>TIPOS DAS TAREFAS</h3>
-      <div class="type-tasks-container">
+    <div class="type-tasks-container">
+      <div class="title-type-tasks">
+        <h3>TIPOS DAS TAREFAS</h3>
+      </div>
+      <div class="my-tasks">
         <div class="project-container text-and-color">
           <div class="task" id="task-project"></div>
           <span>projetos trybe</span>
         </div>
-        <br>
         <div class="exercises-container text-and-color">
           <div class="task" id="task-exercises"></div>
           <span>exercícios trybe</span>
@@ -50,15 +51,19 @@
         </div>
         <div class="anothers-container text-and-color">
           <div class="task" id="task-another"></div>
+          <span>outros compromissos</span>
         </div>
-        <span>outros compromissos</span>
-      </div>
-      <div>
-        <h4>Tipo selecionado:</h4>
-        <div id="selected-task"></div>
-
       </div>
     </div>
+    <div id="selected-type-container">
+      <div>
+        <h4>Tipo selecionado:</h4>
+        <div id="selected-type"></div>
+      </div>
+    </div>
+    </div>
+    </div>
+
     <div class="input-container">
       <h3>COMPROMISSOS</h3>
       <label for="task-input">Novo:</label>
