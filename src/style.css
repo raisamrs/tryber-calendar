@@ -90,15 +90,17 @@ label {
 }
 
 .my-tasks {
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   clear: both;
   float: left;
-  height: 200px;
+  height: 35vh;
   vertical-align: middle;
   width: 49%;
+  cursor: pointer;
 }
 
 .my-tasks div div {
@@ -112,7 +114,7 @@ label {
   width: 35px;
 }
 
-.my-tasks div div:hover {
+.my-tasks div div:active {
   height: 45px;
   width: 45px;
 }
@@ -126,6 +128,7 @@ label {
   letter-spacing: 3px;
   padding-bottom: 10px;
   vertical-align: middle;
+
 }
 
 .tasks-container {
@@ -138,7 +141,7 @@ label {
 }
 
 .tasks-container h3 {
-  color: rgb (102, 102, 102);
+  color: rgb(102, 102, 102);
   font-size: 18px;
   font-weight: 500;
   margin-bottom: 20px;
@@ -162,7 +165,7 @@ label {
 .task-list-container ul {
   list-style-type: none;
   padding: 0;
-  color: rgb (102, 102, 102);
+  color: rgb(102, 102, 102);
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 2px;
@@ -174,13 +177,14 @@ label {
 }
 
 .week-days {
-  font-size: 20px;
+  font-size: 1.4vw;
+  font-weight: 600;
   margin: 0;
   padding: 10px 0;
 }
 
 .select-holidays {
-  background-color: rgb(83, 132, 185);
+  background-color: rgb(136, 145, 155);
 }
 
 .unselect-holidays {
@@ -188,7 +192,7 @@ label {
 }
 
 .day-zoom {
-  color: rgb (119, 119, 119);
+  color: rgb(119, 119, 119);
   display: inline-block;
   font-size: 30px;
   margin: 5px 0;
@@ -221,4 +225,16 @@ input::placeholder , textarea::placeholder {
 
 #task-project {
   background-color: rgb(115, 229, 115);
+}
+
+#task-job {
+  background-color: rgb(130, 49, 207);
+}
+
+#task-leisure {
+  background-color: rgb(235, 199, 37);
+}
+
+#task-another {
+  background-color: rgb(222, 55, 208);
 }
