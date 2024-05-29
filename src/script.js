@@ -223,14 +223,36 @@ function createButton(iconSrc, className) {
   return button;
 }
 
+//* guardando as tarefas no local storage
+function saveTasksToLocalStorage() {
+  const taskList = document.getElementById('task-list').innerHTML;
+  localStorage.setItem('tasks', taskList);
+}
+
 //* adiciona botão à tarefa
-
 function addButtonsToTask(taskItem) {
-  const checkBtn = createButton('./images/check-icon.svg', 'check-button');
-  const deleteBtn = createButton('./images/delete-icon.svg', 'delete-button');
+  if (!taskItem.querySelector('.check-button') || !taskItem.querySelector('.delete-button')) {
+    const checkBtn = createButton('./images/check-icon.svg', 'check-button');
+    const deleteBtn = createButton('./images/delete-icon.svg', 'delete-button');
 
-  taskItem.appendChild(checkBtn);
-  taskItem.appendChild(deleteBtn);
+    taskItem.appendChild(checkBtn);
+    taskItem.appendChild(deleteBtn);
+  }
+
+  const checkBtn = taskItem.querySelector('.check-button');
+  const deleteBtn = taskItem.querySelector('.delete-button');
+
+  checkBtn.addEventListener('click', () => {
+    const taskTextSpan = taskItem.querySelector('span');
+    taskTextSpan.style.textDecoration = taskTextSpan.style.textDecoration === 'line-through'
+      ? 'none' : 'line-through';
+    saveTasksToLocalStorage();
+  });
+
+  deleteBtn.addEventListener('click', () => {
+    taskItem.remove();
+    saveTasksToLocalStorage();
+  });
 }
 
 // Função para adicionar uma nova tarefa à lista
@@ -249,6 +271,7 @@ function addTask() {
 
     taskList.appendChild(newTaskItem);
     taskInput.value = ''; // Limpa o campo de entrada após adicionar a tarefa
+    saveTasksToLocalStorage();
   } else if (!selectedTask) {
     alert('Por favor, selecione um tipo de tarefa!');
   } else {
@@ -269,3 +292,17 @@ function handleKeyPress(event) {
   }
 }
 taskInput.addEventListener('keypress', handleKeyPress);
+
+//* carrega as tasks do local storage qdo a página é carregada
+function loadTasksFromLocalStorage() {
+  const savedTasks = localStorage.getItem('tasks');
+  if (savedTasks) {
+    const taskList = document.getElementById('task-list');
+    taskList.innerHTML = savedTasks;
+    taskList.querySelectorAll('li').forEach((taskItem) => {
+      addButtonsToTask(taskItem);
+    });
+  }
+}
+
+window.addEventListener('load', loadTasksFromLocalStorage);
