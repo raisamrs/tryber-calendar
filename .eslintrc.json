@@ -18,6 +18,7 @@
       "quotes": [2, "single"],
       "implicit-arrow-linebreak": "off",
       "consistent-return": "off",
+      "max-lines": ["error", 400],
       "no-unused-vars": [
         "error",
         {

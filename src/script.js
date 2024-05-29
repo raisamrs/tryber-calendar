@@ -199,6 +199,39 @@ taskType.forEach((type) => {
     }
   });
 });
+//* cria elemento 'li'
+function createTaskElement(taskText, taskColor) {
+  const newTaskItem = document.createElement('li');
+
+  // Cria um span para o texto da tarefa
+  const taskTextSpan = document.createElement('span');
+  taskTextSpan.textContent = taskText;
+  taskTextSpan.style.color = taskColor;
+  newTaskItem.appendChild(taskTextSpan);
+
+  return newTaskItem;
+}
+//* cria um botão
+function createButton(iconSrc, className) {
+  const button = document.createElement('button');
+  button.classList.add(className);
+
+  const img = document.createElement('img');
+  img.src = iconSrc;
+  button.appendChild(img);
+
+  return button;
+}
+
+//* adiciona botão à tarefa
+
+function addButtonsToTask(taskItem) {
+  const checkBtn = createButton('./images/check-icon.svg', 'check-button');
+  const deleteBtn = createButton('./images/delete-icon.svg', 'delete-button');
+
+  taskItem.appendChild(checkBtn);
+  taskItem.appendChild(deleteBtn);
+}
 
 // Função para adicionar uma nova tarefa à lista
 function addTask() {
@@ -209,12 +242,10 @@ function addTask() {
   // Verifica se o campo de entrada não está vazio
   if (taskText !== '' && selectedTask) {
     const taskList = document.getElementById('task-list');
-    const newTaskItem = document.createElement('li');
-    newTaskItem.textContent = taskText;
-
     const selectedColorStyle = window.getComputedStyle(selectedTask);
     const taskColor = selectedColorStyle.getPropertyValue(bgColor);
-    newTaskItem.style.color = taskColor;
+    const newTaskItem = createTaskElement(taskText, taskColor);
+    addButtonsToTask(newTaskItem);
 
     taskList.appendChild(newTaskItem);
     taskInput.value = ''; // Limpa o campo de entrada após adicionar a tarefa
