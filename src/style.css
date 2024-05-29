@@ -12,8 +12,30 @@ body {
   overflow-x: hidden;
 }
 
+button {
+  border: 0.18rem solid rgb(16, 16, 16);
+  background-color: rgb(208, 215, 201);
+  border-radius: 1vw;
+  cursor: pointer;
+  font-size: 1.3rem;
+  height: 1.8rem;
+  width: 10vw;
+}
+
+button:hover {
+  background-color: rgb(116, 118, 115);
+  font-size: 1.4rem;
+  height: 2rem;
+  width: 10.5vw;
+}
+
 h4 {
   margin: 2vh 0;
+}
+
+label {
+  font-weight: 900;
+  font-size: 1.3rem;
 }
 
 ul {
@@ -21,8 +43,7 @@ ul {
 }
 
 #btn-add {
-  margin: 0;
-  width: 15%;
+  margin: 0 2rem;
 }
 
 #days {
@@ -30,6 +51,12 @@ ul {
   flex-wrap: wrap;
   justify-content: start;
   width: 100%;
+}
+
+#month , #year {
+  font-family: Lato, sans-serif;
+  font-size: 1.5rem;
+  color: white;
 }
 
 #selected-type {
@@ -41,7 +68,6 @@ ul {
 #selected-type-container {
   align-content: center;
   align-items: center;
-/*   border: 1px solid darkslategrey; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,9 +84,16 @@ ul {
 }
 
 #task-input {
+  border: 0.1rem solid black;
   border-radius: 0.8rem;
   height: 3vh;
-  width: 30%;
+  text-align: center;
+  width: 30vw;
+}
+
+#task-input::placeholder {
+  text-align: center;
+  font-size: 1rem;
 }
 
 #task-job {
@@ -79,7 +112,11 @@ ul {
   background-color: rgb(238, 238, 238);
   display: inline-block;
   text-align: center;
-  width: 100%;
+  width: 72vw;
+}
+
+.buttons-container button {
+  margin: 2rem;
 }
 
 .day {
@@ -114,11 +151,11 @@ ul {
 
 .input-container {
   align-items: center;
-  column-gap: 5%;
+  gap: 2vh;
   display: flex;
   flex-direction: column;
-  height: 10vh;
-  width: 49%;
+  height: 18vh;
+  width: 50vw;
 }
 
 .label {
@@ -140,7 +177,6 @@ ul {
 
 .my-tasks {
   align-items: flex-start;
-  /*   border: 2px dashed darkmagenta; */
   clear: both;
   cursor: pointer;
   display: flex;
@@ -159,7 +195,6 @@ ul {
   display: inline-block;
   margin-right: 2%;
   vertical-align: middle;
- 
 }
 
 .my-tasks div div {
@@ -193,13 +228,18 @@ ul {
   background-color: rgb(136, 145, 155);
 }
 
+.task:hover {
+  height: 4.5vh;
+  width: 4.5vh;
+}
+
 .task-list-container {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-left: 50%;
-  margin-right: 0.8%;
-  margin-top: 4vh;
+  margin-left: 45.5vw;
+  margin-top: -12vh;
+  width: 50vw;
 }
 
 .task-list-container ul {
@@ -212,10 +252,9 @@ ul {
 }
 
 .tasks-container {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
-  height: 57vh;
+  height: 35vh;
   justify-content: start;
   text-align: center;
   width: 100%;
@@ -231,7 +270,6 @@ ul {
 
 .text-and-color {
   align-items: center;
-  /*   border: 0.1vw solid yellowgreen; */
   display: flex;
   flex-direction: row;
   margin-bottom: 1vh;
@@ -240,11 +278,9 @@ ul {
 
 .title-type-tasks {
   margin-bottom: 3vh;
-  /* border: 1px solid red; */
 }
 
 .type-tasks-container {
-/*   border: 1px solid blue; */
   display: flex;
   flex-direction: column;
   height: 18rem;
@@ -265,7 +301,7 @@ ul {
 }
 
 .week-days li {
-  color: rgb(102, 102, 102);
+  color: rgb(76, 127, 76);
   display: flex;
   flex: 0 0 calc(100% / 7);
   justify-content: center;

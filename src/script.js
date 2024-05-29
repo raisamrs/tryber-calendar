@@ -189,7 +189,7 @@ const taskType = document.querySelectorAll('.task');
 taskType.forEach((type) => {
   type.addEventListener('click', () => {
     const taskTypeChosen = document.querySelector('.selected');
-    const typeSelected = document.getElementById('selected-task');
+    const typeSelected = document.getElementById('selected-type');
     if (taskTypeChosen) {
       const taskChosenColorStyle = window.getComputedStyle(taskTypeChosen);
       const taskColor = taskChosenColorStyle.getPropertyValue(bgColor);
