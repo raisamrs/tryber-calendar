@@ -76,27 +76,27 @@ function addClassesToDays() {
   }
 }
 
-function addEventListenersToDays() {
+/* function addEventListenersToDays() {
   const arrDay = document.querySelectorAll('.day');
 
   const handleMouseoverDay = ({ target }) => {
-    target.style.fontSize = '1.5vw';
+    target.style.fontSize = '2.5vw';
   };
 
   const handleMouseoutDay = ({ target }) => {
-    target.style.fontSize = '1vw';
+    target.style.fontSize = '2vw';
   };
 
   arrDay.forEach((day) => {
     day.addEventListener('mouseover', handleMouseoverDay);
     day.addEventListener('mouseout', handleMouseoutDay);
   });
-}
+} */
 
 function initializeCalendar() {
   addDays();
   addClassesToDays();
-  addEventListenersToDays();
+/*   addEventListenersToDays(); */
 }
 
 initializeCalendar();
