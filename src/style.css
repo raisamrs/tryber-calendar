@@ -71,6 +71,7 @@ ul #days {
 /* #selected-type-container {
   border: 1px solid black;
 } */
+
 #task-another {
   background-color: rgb(222, 55, 208);
 }
@@ -115,15 +116,12 @@ ul #days {
 }
 
 .buttons-container button {
-  border-radius: 2vw;
-}
-
-.buttons-container button , #btn-add {
   border: 0.18rem solid rgb(16, 16, 16);
+  border-radius: 2vw;
   background-color: rgb(208, 215, 201);
 }
 
-.buttons-container button:hover , #btn-add:hover {
+.buttons-container button:hover {
   background-color: rgb(116, 118, 115);
   border: 0.18rem solid rgb(16, 16, 16);
 }
@@ -135,7 +133,7 @@ ul #days {
   margin-top: 5vh;
 }
 
-.check-button , .delete-button {
+.check-button , .delete-button , #btn-add {
   align-items: center;     /* Centraliza verticalmente */
   background-color: rgb(208, 215, 201);
   border: 1px solid rgb(116, 118, 115);
@@ -145,7 +143,7 @@ ul #days {
   width: 3vw;
 }
 
-.check-button img , .delete-button img {
+.check-button img , .delete-button img , #btn-add img {
 
   /* border: 1px solid red; */
   height: 4vw;
