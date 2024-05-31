@@ -63,6 +63,11 @@
     height: 15vh;
   }
 
+  .my-tasks {
+    margin: 0;
+    width: 100%;
+  }
+
   .my-tasks span {
     font-size: 3vw;
   }

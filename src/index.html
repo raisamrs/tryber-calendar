@@ -5,6 +5,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="mediaQueryXsm.css">
   <link rel="stylesheet" href="mediaQuerySm.css">
+  <link rel="stylesheet" href="mediaQueryMd.css">
   <link rel="icon" type="image/svg+xml" href="./images/calendar-icon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
@@ -20,7 +21,7 @@
       <li id="year">2020</li>
     </ul>
   </header>
-  <div class="calendar-container container col-12">
+  <div class="calendar-container col-12">
     <div class="week-days-container container col-12">
       <ul class="week-days">
       </ul>
@@ -40,8 +41,8 @@
         <div class="title-type-tasks">
           <h3 class="col-sm-6 col-md-4 text-center">TIPOS DAS TAREFAS</h3>
         </div>
-        <div class="my-tasks">
-          <div class="project-container text-and-color col-sm-6">
+        <div class="my-tasks d-flex flex-column">
+          <div class="project-container text-and-color">
             <div class="task" id="task-project"></div>
             <span>projetos trybe</span>
           </div>
@@ -74,7 +75,7 @@
 
     <div class="input-container d-flex flex-column align-items-center col-12 col-lg-4">
       <h3 id="appointment-title" class="text-center">COMPROMISSOS</h3>
-      <div class="input-appointment-container d-flex flex-row justify-content-around my-2">
+      <div class="input-appointment-container d-flex flex-row justify-content-around align-items-center my-2">
         <label class="col-2 mx-1 task-input">Novo:</label>
         <input class="col-8" maxlength="40" type="text" id="task-input" placeholder="Escreva seu compromisso">
         <button id="btn-add" class="col-2">

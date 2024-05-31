@@ -1,7 +1,7 @@
-@media ( min-width : 576px ) and ( max-width : 768px ) {
+@media ( min-width : 576px ) and ( max-width : 767px ) {
 
   header {
-    height: 8vh;
+    height: 7vh;
   }
 
   .buttons-container button {
@@ -19,8 +19,7 @@
 
   .buttons-container button:hover {
     font-size: 3vw;
-    height: 6vw;
-    width: 22vw;
+    height: 5vw;
   }
 
   #month , #year {
@@ -28,8 +27,8 @@
   }
 
   .calendar-container {
-    margin-top: 4vh;
-    height: 18vh;
+    margin-top: 2vh;
+    height: 20vh;
   }
 
   .check-button , .delete-button , #btn-add {
@@ -60,7 +59,19 @@
   }
 
   .days-container {
-    height: 15vh;
+    height: 12vh;
+  }
+
+  .exercises-container {
+    border: 1px solid red;
+  }
+
+  .job-container {
+    border: 1px solid red;
+  }
+
+  .leisure-container {
+    border: 1px solid red;
   }
 
   .my-tasks span {
@@ -72,13 +83,13 @@
     width: 1.5vh;
   }
 
-
   .month-container {
     padding: 0.5vh;
   }
 
   .project-container {
     font-size: 2vw;
+    border: 1px solid red;
   }
 
   .task:active , #selected-type {
@@ -96,11 +107,11 @@
   }
 
   .title-type-tasks h3 , #appointment-title , #costum-h4 {
-    font-size: 3.5vw;
+    font-size: 3vw;
   }
 
   .week-days-container {
-    height: 3vh;
+    height: 3.8vh;
     margin-top: 1vh;
   }
 
