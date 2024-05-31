@@ -1,19 +1,36 @@
 @media ( min-width : 992px ) and ( max-width : 1199px ) {
 
   #task-input {
-    height: 2.5vh;
+    font-size: 1.8vw;
+    min-height: 1vh;
+    max-height: 5vh;
     width: 100%;
   }
 
   #task-input::placeholder {
     text-align: center;
-    font-size: 2.3vw;
+    font-size: 1.8vw;
     vertical-align: middle;
   }
 
   .input-appointment-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+  }
+
+  .input-appointment-container label {
+    text-align: center;
+  }
+
+  .my-tasks div div , #selected-type {
+    height: 3vw;
+    width: 3vw;
+  }
+
+  .my-tasks div div:hover , #selected-type:hover {
+    height: 3.5vw;
+    width: 3.5vw;
   }
 
   .type-tasks-container , #selected-type-container , .input-container {
@@ -23,9 +40,14 @@
   .tasks-container {
     display: flex;
     flex-flow: row;
+    margin: 0 4vw;
   }
 
   .task-input {
     font-size: 2.5vw;
+  }
+
+  .text-and-color {
+    border: 1px solid blue;
   }
 }
