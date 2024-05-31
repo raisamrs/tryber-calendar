@@ -288,6 +288,10 @@ li span {
   width: 4.5vh;
 }
 
+.tasks-container {
+  margin: 2vh;
+}
+
 .task-list-container {
   border: 1px solid purple;
 }

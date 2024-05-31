@@ -80,18 +80,9 @@
     font-size: 2vw;
   }
 
-  .task:active , #selected-type {
-    height: 2.5vh;
-    width: 2.5vh;
-  }
-
   .task:hover , #selected-type {
     height: 2.5vh;
     width: 2.5vh;
-  }
-
-  .tasks-container {
-    margin: 1.5vh;
   }
 
   .title-type-tasks h3 , #appointment-title , #costum-h4 {
