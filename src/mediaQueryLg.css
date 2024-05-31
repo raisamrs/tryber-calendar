@@ -13,6 +13,17 @@
     vertical-align: middle;
   }
 
+  .buttons-container {
+    height: auto;
+    margin: 2vh 0;
+  }
+
+  .buttons-container button {
+    font-size: 2.5vw;
+    height: 3vh;
+    width: 20vw;
+  }
+
   .input-appointment-container {
     display: flex;
     flex-direction: column;
