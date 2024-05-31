@@ -84,7 +84,7 @@ ul #days {
 #task-input {
   border: 0.1rem solid black;
   border-radius: 0.8rem;
-  font-size: 3.5vw;
+  font-size: 3vw;
   text-align: center;
 }
 
@@ -285,7 +285,6 @@ li span {
   width: 4.5vh;
 }
 
-
 .task-list-container {
   border: 1px solid purple;
 }
@@ -305,6 +304,7 @@ li span {
 
 .tasks-types-selected-container {
   border: 1px solid blue;
+  width: 100%;
 }
 
 .text-and-color {
@@ -325,10 +325,6 @@ li span {
   border: 1px solid violet;
   width: 100%;
 }
-
-/* .type-tasks-container {
-  border: 1px solid yellowgreen;
-} */
 
 .unselect-holidays {
   background-color: rgb(238, 238, 238);

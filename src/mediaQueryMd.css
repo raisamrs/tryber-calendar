@@ -29,7 +29,6 @@
   }
 
   .calendar-container {
-    border: 1px solid red;
     height: 55%;
     margin: 3vh 0;
   }
@@ -59,7 +58,6 @@
   }
 
   .task-input {
-    border: 1px solid red;
     font-size: 3vw;
   }
 }
