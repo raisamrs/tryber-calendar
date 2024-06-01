@@ -1,5 +1,14 @@
 @media ( min-width : 1px ) and ( max-width : 575px ) {
 
+  #month , #year {
+    font-size: 1rem;
+  }
+
+  #task-input {
+    height: 3vh;
+    width: 70vw;
+  }
+
   header {
     height: 8vh;
   }
@@ -17,9 +26,6 @@
     height: 4vh;
   }
 
-  #month , #year {
-    font-size: 1rem;
-  }
 
   .calendar-container {
     margin-top: 2vh;
@@ -55,6 +61,14 @@
 
   .days-container {
     height: 15vh;
+  }
+
+  .input-appointment-container {
+    height: 3vh;
+  }
+
+  .input-appointment-container label {
+    width: 5vw;
   }
 
   .my-tasks {

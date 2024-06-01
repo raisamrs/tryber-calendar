@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="mediaQueryMd.css">
   <link rel="stylesheet" href="mediaQueryLg.css">
   <link rel="stylesheet" href="mediaQueryXlg.css">
+  <link rel="stylesheet" href="mediaQueryXxl.css">
 
   <link rel="icon" type="image/svg+xml" href="./images/calendar-icon.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -38,9 +39,9 @@
     <button id="btn-holiday">Feriados</button>
     <button id="btn-friday">Sexta-feira</button>
   </div>
-  <section class="tasks-container d-flex flex-column flex-lg-row col-xl-12">
-    <div class="tasks-types-selected-container d-flex flex-row flex-sm-row col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6">
-      <div class="type-tasks-container d-flex flex-column align-items-xl-center col-sm-6 col-lg-7 col-xl-6 col-xxl-4">
+  <section class="tasks-container d-flex flex-column flex-lg-row col-xl-12 col-xxl-12">
+    <div class="tasks-types-selected-container d-flex flex-row flex-sm-row col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6 col-xxl-4">
+      <div class="type-tasks-container d-flex flex-column align-items-xl-center col-sm-6 col-lg-7 col-xl-6 col-xxl-6">
         <div class="title-type-tasks">
           <h3 class="col-sm-6 col-md-4 text-center">TIPOS DAS TAREFAS</h3>
         </div>
@@ -68,25 +69,25 @@
         </div>
       </div>
       <div id="selected-type-container"
-        class="d-flex flex-column justify-content-center col-sm-6 col-md-6 col-lg-5 col-xl-4  col-xxl-4">
+        class="d-flex flex-column justify-content-center align-items-xxl-start align-content-xxl-center justify-content-xxl-center col-sm-6 col-md-6 col-lg-5 col-xl-4  col-xxl-6">
         <div class="d-flex flex-column align-items-center my-xl-0">
           <h4 id="costum-h4" class="text-center">TIPO SELECIONADO:</h4>
           <div id="selected-type"></div>
         </div>
       </div>
     </div>
-    <div class="input-container d-flex flex-column align-items-center col-12 col-lg-4 col-xl-6">
+    <div class="input-container d-flex flex-column align-items-center col-12 col-lg-4 col-xl-6 col-xxl-8">
       <h3 id="appointment-title" class="text-center">COMPROMISSOS</h3>
-      <div class="input-appointment-container d-flex flex-row flex-lg-column flex-xl-column justify-content-around align-items-sm-center align-items-center my-2">
-        <label class="col-2 col-lg-12 mx-1 task-input">Novo:</label>
-        <textarea class="col-8" maxlength="40" type="text" id="task-input" placeholder="Escreva seu compromisso"></textarea>
-        <button id="btn-add" class="col-2">
+      <div class="input-appointment-container d-flex flex-row flex-lg-column flex-xl-column flex-xxl-row justify-content-around justify-content-xxl-center align-items-sm-center align-items-center my-2 col-xxl-10">
+        <label class="col-2 col-lg-12 col-xxl-2 mx-1 task-input">Novo:</label>
+        <textarea class="col-8 col-xxl-8" maxlength="40" type="text" id="task-input" placeholder="Escreva seu compromisso"></textarea>
+        <button id="btn-add" class="col-2 col-xxl-2">
           <img src="./images/add_circle - icon.svg" alt="botão adicionar compromisso">
         </button>
       </div>
     </div>
   </section>
-  <div class="task-list-container d-flex flex-column align-items-center my-3">
+  <div class="task-list-container d-flex flex-column align-items-center my-3 col-xxl-12">
     <ul id="task-list">
     </ul>
   </div>
