@@ -48,10 +48,6 @@
     height: 3vw;
   }
 
-  .check-button:hover , .delete-button:hover , #btn-add:hover {
-    background-color: rgb(181, 208, 215);
-  }
-
   .day {
     font-size: 2.4vw;
     height: 3.5vw;

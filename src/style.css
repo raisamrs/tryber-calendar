@@ -32,8 +32,13 @@ img {
 
 label {
   font-weight: 900;
-  font-size: 4vw;
+  font-size: 2vw;
 }
+
+textarea {
+  font-size: 2vw;
+}
+
 
 ul {
   list-style-type: none;
@@ -169,6 +174,10 @@ ul #days {
   border: 1px solid red;
   height: 4vw;
   margin: 1vw;
+}
+
+.check-button:hover , .delete-button:hover , #btn-add:hover {
+  background-color: rgb(181, 208, 215);
 }
 
 .day {
