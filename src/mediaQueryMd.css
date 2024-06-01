@@ -20,21 +20,42 @@
   }
 
   .buttons-container {
-    height: 45%;
-    margin-bottom: 3%;
+    height: auto;
   }
 
   .buttons-container button {
-    width: 15vh;
+    font-size: 1rem;
+    width: 15vw;
   }
 
   .calendar-container {
-    height: 55%;
+    height: auto;
     margin: 3vh 0;
+  }
+
+  .day {
+    height: auto;
+    font-size: 0.8rem;
+  }
+
+  .day:hover {
+    font-size: 1.3rem;
+  }
+
+  .days-container {
+    height: auto;
   }
 
   .check-button img , .delete-button img , #btn-add img {
     height: 3vw;
+  }
+
+  .input-container label {
+    font-size: 1rem;
+  }
+
+  .month-container {
+    height: 30%;
   }
 
   .my-tasks {
@@ -59,5 +80,18 @@
 
   .task-input {
     font-size: 3vw;
+  }
+
+  .title-type-tasks {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .type-tasks-container {
+    display: flex;
+    align-items: center;
   }
 }

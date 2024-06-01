@@ -5,6 +5,10 @@
     height: 12vh;
   }
 
+  #costum-h4 {
+    width: 100%;
+  }
+
   #task-input {
     font-size: 2vw;
     width: 100%;
@@ -65,12 +69,24 @@
     margin-right: 0;
   }
 
+  .title-type-tasks {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-type-tasks h3 {
+    width: 60%;
+  }
+
   .title-type-tasks h3 , #appointment-title , #costum-h4 {
     font-size: 1.8vw;
   }
 
   .type-tasks-container , #selected-type-container {
-    border: 1px solid maroon;
+
+    /* border: 1px solid maroon; */
     margin: 0 2vh;
   }
 }

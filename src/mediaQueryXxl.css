@@ -72,11 +72,6 @@
     font-size: 1.3vw;
   }
 
-  .type-tasks-container , #selected-type-container {
-    border: 1px solid maroon;
-
-  }
-
   .week-days {
     font-size: 1.5vw;
   }

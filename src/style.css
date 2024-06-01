@@ -39,7 +39,6 @@ textarea {
   font-size: 2vw;
 }
 
-
 ul {
   list-style-type: none;
   margin-bottom: 0 ! important;
@@ -49,6 +48,14 @@ ul {
 
 #btn-add {
   margin: 0 2rem;
+}
+
+#costum-h4 {
+
+  /* border: 1px solid saddlebrown; */
+  margin-bottom: 3vh;
+  text-align: center;
+  width: 80%;
 }
 
 #days {
@@ -75,7 +82,10 @@ ul #days {
 }
 
 #selected-type-container {
-  border: 1px solid black;
+
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: start;
 }
 
 #task-another {
@@ -104,12 +114,21 @@ ul #days {
   background-color: rgb(130, 49, 207);
 }
 
+#task-list {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
 #task-leisure {
   background-color: rgb(151, 127, 18);
 }
 
 .week-days li {
-  border: 1px solid grey;
+
+  /* border: 1px solid grey; */
   color: rgb(76, 127, 76);
   display: flex;
   flex: 0 0 calc(100% / 7);
@@ -120,7 +139,7 @@ ul #days {
 
 #task-list li {
   align-items: center;
-  border: 1px solid green;
+  /*   border: 1px solid green; */
   display: flex;
   flex-direction: row-reverse;
   height: auto;
@@ -132,7 +151,8 @@ ul #days {
 }
 
 .buttons-container {
-  border: 2px solid darkslategrey;
+
+  /* border: 2px solid darkslategrey; */
   align-items: center;
   display: flex;
   justify-content: space-evenly;
@@ -152,7 +172,8 @@ ul #days {
 }
 
 .calendar-container {
-  border: 4px solid red;
+
+  /* border: 4px solid red; */
   height: 55%;
   margin-top: 5vh;
 }
@@ -171,7 +192,8 @@ ul #days {
 }
 
 .check-button img , .delete-button img , #btn-add img {
-  border: 1px solid red;
+
+  /* border: 1px solid red; */
   height: 4vw;
   margin: 1vw;
 }
@@ -181,7 +203,8 @@ ul #days {
 }
 
 .day {
-  border: 1px solid salmon;
+
+  /* border: 1px solid salmon; */
   box-sizing: border-box;
   align-items: center;
   display: flex;
@@ -193,11 +216,12 @@ ul #days {
 }
 
 .day:hover {
-  font-size: 4vw;
+  font-weight: 700;
 }
 
 .days-container {
-  border: 1px solid blue;
+
+  /* border: 1px solid blue; */
   display: flex;
   flex-wrap: wrap;
   width: 72vw;
@@ -217,12 +241,14 @@ ul #days {
   display: flex;
 }
 
-.input-container {
+/* .input-container {
   border: 1px solid darkorange;
 }
+ */
 
 .input-appointment-container {
-  border: 1px solid chartreuse;
+
+  /* border: 1px solid chartreuse; */
   width: 100%;
 }
 
@@ -243,9 +269,11 @@ ul #days {
 }
 
 .my-tasks {
-  border: 3px solid goldenrod;
+
+  /* border: 3px solid goldenrod; */
   clear: both;
   cursor: pointer;
+  margin-left: 3vw;
   vertical-align: middle;
   width: 80%;
 }
@@ -298,14 +326,15 @@ li span {
 }
 
 .tasks-container {
-  border: 1px dashed mediumorchid;
+
+  /* border: 2px dashed blue; */
   height: auto;
   margin: 2vh;
 }
 
-.task-list-container {
-  border: 1px solid purple;
-}
+/* .task-list-container {
+  border: 2px solid purple;
+} */
 
 .tasks-container h3 , #appointment-title , #costum-h4 {
   color: rgb(102, 102, 102);
@@ -316,7 +345,8 @@ li span {
 }
 
 .tasks-types-selected-container {
-  border: 1px solid blue;
+
+  /* border: 4px solid rgb(26, 85, 21); */
   width: 100%;
 }
 
@@ -328,14 +358,20 @@ li span {
   width: 100%;
 }
 
+.type-tasks-container {
+  border-right: 0.5vw solid rgba(102, 102, 102, 0.207);
+}
+
 .title-type-tasks {
-  border: 1px solid yellowgreen;
+
+  /*   border: 1px solid rgb(205, 50, 91); */
   margin-bottom: 3vh;
-  width: 100%;
+  width: 80%;
 }
 
 .title-type-tasks h3 {
-  border: 1px solid violet;
+
+  /* border: 1px solid violet; */
   width: 100%;
 }
 
@@ -352,7 +388,8 @@ li span {
 }
 
 .week-days-container {
-  border: 1px solid hotpink;
+
+  /* border: 1px solid hotpink; */
   align-items: center;
   display: flex;
   height: auto;

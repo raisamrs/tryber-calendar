@@ -62,20 +62,8 @@
     height: 12vh;
   }
 
-  .exercises-container {
-    border: 1px solid red;
-  }
-
   .input-appointment-container {
     height: 4.5vh;
-  }
-
-  .job-container {
-    border: 1px solid red;
-  }
-
-  .leisure-container {
-    border: 1px solid red;
   }
 
   .my-tasks span {
@@ -91,11 +79,6 @@
     padding: 0.5vh;
   }
 
-  .project-container {
-    font-size: 2vw;
-    border: 1px solid red;
-  }
-
   .task:active , #selected-type {
     height: 2.5vh;
     width: 2.5vh;
@@ -108,6 +91,19 @@
 
   .title-type-tasks h3 , #appointment-title , #costum-h4 {
     font-size: 3vw;
+  }
+
+  .title-type-tasks {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .type-tasks-container {
+    display: flex;
+    align-items: center;
   }
 
   .week-days-container {
