@@ -1,0 +1,120 @@
+@media ( min-width : 576px ) and ( max-width : 767px ) {
+
+  header {
+    height: 7vh;
+  }
+
+  #task-input {
+    font-size: 2.4vw;
+    max-height: 4vh;
+  }
+
+  #task-input:placeholder {
+    font-size: 2vw;
+  }
+
+  .buttons-container button {
+    border-radius: 3vw;
+    font-size: 2.5vw;
+    margin: 0 0.5vw;
+    height: 4.5vw;
+    width: 20vw;
+  }
+
+  .buttons-container {
+    margin-top: 0.5vh;
+    height: 4vh;
+  }
+
+  #month , #year {
+    font-size: 1rem;
+  }
+
+  .calendar-container {
+    margin-top: 2vh;
+    height: 20vh;
+  }
+
+  .check-button , .delete-button , #btn-add {
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    height: 6vw;
+    margin: 1vw;
+    width: 6vw;
+  }
+
+  .check-button img , .delete-button img , #btn-add img {
+    height: 3vw;
+  }
+
+  .day {
+    font-size: 2.4vw;
+    height: 3.5vw;
+  }
+
+  .day:hover {
+    font-size: 3.3vw;
+    height: 3vw;
+  }
+
+  .days-container {
+    height: 12vh;
+  }
+
+  .input-appointment-container {
+    height: 4.5vh;
+  }
+
+  .my-tasks span {
+    font-size: 3vw;
+  }
+
+  .my-tasks div div , #selected-type {
+    height: 1.5vh;
+    width: 1.5vh;
+  }
+
+  .month-container {
+    padding: 0.5vh;
+  }
+
+  .task:active , #selected-type {
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .task:hover , #selected-type {
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+  .title-type-tasks h3 , #appointment-title , #costum-h4 {
+    font-size: 3vw;
+  }
+
+  .title-type-tasks {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .type-tasks-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .week-days-container {
+    height: 3.8vh;
+    margin-top: 1vh;
+  }
+
+  .week-days li {
+    font-size: 2.5vw;
+    padding-bottom: 0;
+    margin-top: 1vh;
+  }
+
+}

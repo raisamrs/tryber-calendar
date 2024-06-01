@@ -3,51 +3,90 @@
 
 <head>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mediaQueryXsm.css">
+  <link rel="stylesheet" href="mediaQuerySm.css">
+  <link rel="stylesheet" href="mediaQueryMd.css">
+  <link rel="stylesheet" href="mediaQueryLg.css">
+  <link rel="stylesheet" href="mediaQueryXlg.css">
+  <link rel="stylesheet" href="mediaQueryXxl.css">
+
+  <link rel="icon" type="image/svg+xml" href="./images/calendar-icon.png" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width" />
-  <title>Calendário Trybe 🗓️</title>
+  <title>Calendário Trybe</title>
 </head>
 
 <body>
   <header class="month-container">
     <ul>
-      <li id="month">Dezembro</li>
+      <li id="month">DEZEMBRO</li>
       <li id="year">2020</li>
     </ul>
   </header>
-  <div class="week-days-container">
-    <ul class="week-days">
-    </ul>
+  <div class="calendar-container col-12">
+    <div class="week-days-container container col-12">
+      <ul class="week-days">
+      </ul>
+    </div>
+    <div class="days-container container col-12">
+      <ul id="days">
+      </ul>
+    </div>
   </div>
-  <div class="days-container">
-    <ul id="days">
-    </ul>
-  </div>
-  <div class="buttons-container">
+  <div class="buttons-container col-12">
     <button id="btn-holiday">Feriados</button>
     <button id="btn-friday">Sexta-feira</button>
   </div>
-  <section class="tasks-container">
-    <div class="my-tasks">
-      <h3>MINHAS TAREFAS</h3>
-      <div class="project-container">
-        <div class="task" id="task-project"></div>
-        <span>projeto</span>
+  <section class="tasks-container d-flex flex-column flex-lg-row col-xl-12 col-xxl-12">
+    <div class="tasks-types-selected-container d-flex flex-row flex-sm-row col-12 col-sm-12 col-md-12 col-lg-8 col-xl-6 col-xxl-4">
+      <div class="type-tasks-container d-flex flex-column align-items-lg-center align-items-xl-center col-sm-6 col-lg-7 col-xl-6 col-xxl-6">
+        <div class="title-type-tasks">
+          <h3 class="col-sm-6 col-md-4 text-center">TIPOS DAS TAREFAS</h3>
+        </div>
+        <div class="my-tasks d-flex flex-column justify-content-xl-center">
+          <div class="project-container text-and-color">
+            <div class="task" id="task-project"></div>
+            <span>projetos trybe</span>
+          </div>
+          <div class="exercises-container text-and-color">
+            <div class="task" id="task-exercises"></div>
+            <span>exercícios trybe</span>
+          </div>
+          <div class="job-container text-and-color">
+            <div class="task" id="task-job"></div>
+            <span>trabalho</span>
+          </div>
+          <div class="leisure-container text-and-color">
+            <div class="task" id="task-leisure"></div>
+            <span>lazer</span>
+          </div>
+          <div class="anothers-container text-and-color">
+            <div class="task" id="task-another"></div>
+            <span>outros</span>
+          </div>
+        </div>
       </div>
-      <br>
-      <div class="exercises-container">
-        <div class="task" id="task-exercises"></div>
-        <span>exercícios</span>
+      <div id="selected-type-container">
+        <div class="d-flex flex-column align-items-center my-xl-0">
+          <h4 id="costum-h4" class="text-center">TIPO SELECIONADO:</h4>
+          <div id="selected-type"></div>
+        </div>
       </div>
     </div>
-    <div class="input-container">
-      <h3>COMPROMISSOS</h3>
-      <label for="task-input">Novo:</label>
-      <input type="text" id="task-input" placeholder="Escreva seu compromisso">
-      <button id="btn-add">Adicionar</button>
+    <div class="input-container d-flex flex-column align-items-center col-12 col-lg-4 col-xl-6 col-xxl-8">
+      <h3 id="appointment-title" class="text-center">COMPROMISSOS</h3>
+      <div class="input-appointment-container d-flex flex-row flex-lg-column flex-xl-column flex-xxl-row justify-content-around justify-content-xxl-center align-items-sm-center align-items-center my-2 col-xxl-10">
+        <label class="col-2 col-lg-12 col-xxl-2 mx-1 task-input">Novo:</label>
+        <textarea class="col-8 col-xxl-8" maxlength="40" type="text" id="task-input" placeholder="Escreva seu compromisso"></textarea>
+        <button id="btn-add" class="col-2 col-xxl-2">
+          <img src="./images/add_circle - icon.svg" alt="botão adicionar compromisso">
+        </button>
+      </div>
     </div>
   </section>
-  <div class="task-list-container">
+  <div class="task-list-container d-flex flex-column align-items-center my-3 col-xxl-12">
     <ul id="task-list">
     </ul>
   </div>

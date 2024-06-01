@@ -1,7 +1,6 @@
 const createDaysOfTheWeek = () => {
   const weekDays = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
   const weekDaysList = document.querySelector('.week-days');
-
   for (let index = 0; index < weekDays.length; index += 1) {
     const days = weekDays[index];
     const dayListItem = document.createElement('li');
@@ -11,6 +10,7 @@ const createDaysOfTheWeek = () => {
   }
 };
 
+const bgColor = 'background-color';
 createDaysOfTheWeek();
 
 const decemberDaysList = [29, 30, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,
@@ -76,9 +76,27 @@ function addClassesToDays() {
   }
 }
 
+/* function addEventListenersToDays() {
+  const arrDay = document.querySelectorAll('.day');
+
+  const handleMouseoverDay = ({ target }) => {
+    target.style.fontSize = '2.5vw';
+  };
+
+  const handleMouseoutDay = ({ target }) => {
+    target.style.fontSize = '2vw';
+  };
+
+  arrDay.forEach((day) => {
+    day.addEventListener('mouseover', handleMouseoverDay);
+    day.addEventListener('mouseout', handleMouseoutDay);
+  });
+} */
+
 function initializeCalendar() {
   addDays();
   addClassesToDays();
+/*   addEventListenersToDays(); */
 }
 
 initializeCalendar();
@@ -127,29 +145,6 @@ fridayBtn.addEventListener('click', handleClickBtnFriday);
 /* Ao passar o ponteiro do mouse em um dia do mês no calendário, o texto desse dia deve aumentar para 30px e, quando o ponteiro do mouse sair do dia, o texto deve retornar ao tamanho original.
 De olho na dica 👀: Você pode utilizar a propriedade event.target. De olho na dica 👀: O tamanho original do texto é 20px. */
 
-const arrDay = document.querySelectorAll('.day');
-
-const handleMouseoverDay = ({ target }) => {
-  const dayStyle = window.getComputedStyle(target);
-  const fontSizeDay = dayStyle.getPropertyValue('font-size');
-  if (fontSizeDay === '20px') {
-    target.style.fontSize = '30px';
-  }
-};
-
-const handleMouseoutDay = ({ target }) => {
-  const dayStyle = window.getComputedStyle(target);
-  const fontSizeDay = dayStyle.getPropertyValue('font-size');
-  if (fontSizeDay === '30px') {
-    target.style.fontSize = '20px';
-  }
-};
-
-for (let i = 0; i < arrDay.length; i += 1) {
-  arrDay[i].addEventListener('mouseout', handleMouseoutDay);
-  arrDay[i].addEventListener('mouseover', handleMouseoverDay);
-}
-
 /* Exercício 5 - Implemente uma função que seleciona uma tarefa e atribua a cor da tarefa ao dia do calendário */
 
 const taskColors = document.querySelectorAll('.task');
@@ -175,30 +170,112 @@ const daysOfMonth = document.querySelectorAll('.day');
 daysOfMonth.forEach((day) => {
   day.addEventListener('click', () => {
     const selectedColor = document.querySelector('.selected');
-    const selectedColorStyle = window.getComputedStyle(selectedColor);
-    const textColor = selectedColorStyle.getPropertyValue('background-color');
-    if (day.style.color !== textColor) {
-      day.style.color = textColor;
+    if (selectedColor) {
+      const selectedColorStyle = window.getComputedStyle(selectedColor);
+      const textColor = selectedColorStyle.getPropertyValue(bgColor);
+      if (day.style.color !== textColor) {
+        day.style.color = textColor;
+      } else {
+        day.style.color = 'rgb(119,119,119)';
+      }
     } else {
-      day.style.color = 'rgb(119,119,119)';
+      alert('Por favor, selecione uma tarefa antes de atribuir uma cor.');
     }
   });
 });
+
+const taskType = document.querySelectorAll('.task');
+
+taskType.forEach((type) => {
+  type.addEventListener('click', () => {
+    const taskTypeChosen = document.querySelector('.selected');
+    const typeSelected = document.getElementById('selected-type');
+    if (taskTypeChosen) {
+      const taskChosenColorStyle = window.getComputedStyle(taskTypeChosen);
+      const taskColor = taskChosenColorStyle.getPropertyValue(bgColor);
+      typeSelected.style.backgroundColor = taskColor;
+    } else {
+      typeSelected.style.color = 'rgb(255, 255, 255)';
+    }
+  });
+});
+//* cria elemento 'li'
+function createTaskElement(taskText, taskColor) {
+  const newTaskItem = document.createElement('li');
+
+  // Cria um span para o texto da tarefa
+  const taskTextSpan = document.createElement('span');
+  taskTextSpan.textContent = taskText;
+  taskTextSpan.style.color = taskColor;
+  newTaskItem.appendChild(taskTextSpan);
+
+  return newTaskItem;
+}
+//* cria um botão
+function createButton(iconSrc, className) {
+  const button = document.createElement('button');
+  button.classList.add(className);
+
+  const img = document.createElement('img');
+  img.src = iconSrc;
+  button.appendChild(img);
+
+  return button;
+}
+
+//* guardando as tarefas no local storage
+function saveTasksToLocalStorage() {
+  const taskList = document.getElementById('task-list').innerHTML;
+  localStorage.setItem('tasks', taskList);
+}
+
+//* adiciona botão à tarefa
+function addButtonsToTask(taskItem) {
+  if (!taskItem.querySelector('.check-button') || !taskItem.querySelector('.delete-button')) {
+    const checkBtn = createButton('./images/check-icon.svg', 'check-button');
+    const deleteBtn = createButton('./images/delete-icon.svg', 'delete-button');
+
+    taskItem.appendChild(checkBtn);
+    taskItem.appendChild(deleteBtn);
+  }
+
+  const checkBtn = taskItem.querySelector('.check-button');
+  const deleteBtn = taskItem.querySelector('.delete-button');
+
+  checkBtn.addEventListener('click', () => {
+    const taskTextSpan = taskItem.querySelector('span');
+    taskTextSpan.style.textDecoration = taskTextSpan.style.textDecoration === 'line-through'
+      ? 'none' : 'line-through';
+    saveTasksToLocalStorage();
+  });
+
+  deleteBtn.addEventListener('click', () => {
+    taskItem.remove();
+    saveTasksToLocalStorage();
+  });
+}
 
 // Função para adicionar uma nova tarefa à lista
 function addTask() {
   const taskInput = document.getElementById('task-input');
   const taskText = taskInput.value.trim();
+  const selectedTask = document.querySelector('.task.selected');
 
   // Verifica se o campo de entrada não está vazio
-  if (taskText !== '') {
+  if (taskText !== '' && selectedTask) {
     const taskList = document.getElementById('task-list');
-    const newTaskItem = document.createElement('li');
-    newTaskItem.textContent = taskText;
+    const selectedColorStyle = window.getComputedStyle(selectedTask);
+    const taskColor = selectedColorStyle.getPropertyValue(bgColor);
+    const newTaskItem = createTaskElement(taskText, taskColor);
+    addButtonsToTask(newTaskItem);
+
     taskList.appendChild(newTaskItem);
     taskInput.value = ''; // Limpa o campo de entrada após adicionar a tarefa
+    saveTasksToLocalStorage();
+  } else if (!selectedTask) {
+    alert('Por favor, selecione um tipo de tarefa!');
   } else {
-    alert('Por favor, insira um texto para a tarefa!');
+    alert('Por favor, insira uma tarefa!');
   }
 }
 // Adiciona evento de clique ao botão 'Adicionar'
@@ -215,3 +292,17 @@ function handleKeyPress(event) {
   }
 }
 taskInput.addEventListener('keypress', handleKeyPress);
+
+//* carrega as tasks do local storage qdo a página é carregada
+function loadTasksFromLocalStorage() {
+  const savedTasks = localStorage.getItem('tasks');
+  if (savedTasks) {
+    const taskList = document.getElementById('task-list');
+    taskList.innerHTML = savedTasks;
+    taskList.querySelectorAll('li').forEach((taskItem) => {
+      addButtonsToTask(taskItem);
+    });
+  }
+}
+
+window.addEventListener('load', loadTasksFromLocalStorage);

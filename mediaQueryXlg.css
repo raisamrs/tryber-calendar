@@ -1,0 +1,92 @@
+@media ( min-width : 1200px ) and ( max-width : 1399px ) {
+
+  header {
+    background-color: green;
+    height: 12vh;
+  }
+
+  #costum-h4 {
+    width: 100%;
+  }
+
+  #task-input {
+    font-size: 2vw;
+    width: 100%;
+  }
+
+  #task-input::placeholder {
+    font-size: 2vw;
+  }
+
+  .buttons-container {
+    height: 6vh;
+  }
+
+  .buttons-container button {
+    height: 5.6vh;
+    font-size: 1.8vw;
+    width: 16vw;
+  }
+
+  .calendar-container {
+    height: 45%;
+    margin: 2vh 0;
+  }
+
+
+  .check-button , .delete-button , #btn-add {
+    border-radius: 0.9vw;
+    height: 3vw;
+    margin: 1vw;
+    width: 3vw;
+  }
+
+  .check-button img , .delete-button img , #btn-add img {
+    height: 2vw;
+    width: 2vw;
+  }
+
+  .my-tasks span {
+    font-size: 1.6vw;
+  }
+
+  .day {
+    font-size: 2.3vw;
+    height: 6vh;
+    padding: 1.5vh 0;
+  }
+
+  .day:hover {
+    font-size: 3.2vw;
+  }
+
+  .input-appointment-container label {
+    text-align: center;
+  }
+
+  .tasks-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .title-type-tasks {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-type-tasks h3 {
+    width: 60%;
+  }
+
+  .title-type-tasks h3 , #appointment-title , #costum-h4 {
+    font-size: 1.8vw;
+  }
+
+  .type-tasks-container , #selected-type-container {
+
+    /* border: 1px solid maroon; */
+    margin: 0 2vh;
+  }
+}

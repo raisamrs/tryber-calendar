@@ -1,0 +1,89 @@
+@media ( min-width : 992px ) and ( max-width : 1199px ) {
+
+  #task-input {
+    font-size: 1.8vw;
+    min-height: 1vh;
+    max-height: 5vh;
+    width: 100%;
+  }
+
+  #task-input::placeholder {
+    text-align: center;
+    font-size: 1.8vw;
+    vertical-align: middle;
+  }
+
+  .buttons-container {
+    height: auto;
+    margin: 2vh 0;
+  }
+
+  .buttons-container button {
+    font-size: 1.3rem;
+    height: 4vh;
+    width: 18vw;
+  }
+
+  .calendar-container {
+    height: auto;
+  }
+
+  .check-button , .delete-button , #btn-add {
+    border-radius: 1.5vh;
+    height: 4vw;
+    width: 4vw;
+  }
+
+  .check-button img , .delete-button img , #btn-add img {
+    height: 2.4vw;
+    width: 2.4vw;
+  }
+
+  .day:hover {
+    font-size: 1.8rem;
+  }
+
+  .input-appointment-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .input-appointment-container label {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .my-tasks div div , #selected-type {
+    height: 3vw;
+    width: 3vw;
+  }
+
+  .my-tasks div div:hover , #selected-type:hover {
+    height: 3.5vw;
+    width: 3.5vw;
+  }
+
+  .tasks-container {
+    display: flex;
+    flex-flow: row;
+    margin: 0 4vw;
+  }
+
+  .tasks-container h3 , #appointment-title , #costum-h4 {
+    font-size: 1.4rem;
+  }
+
+  .task-input {
+    font-size: 2.5vw;
+  }
+
+  .title-type-tasks {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+  }
+
+}

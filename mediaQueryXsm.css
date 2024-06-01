@@ -1,0 +1,133 @@
+@media ( min-width : 1px ) and ( max-width : 575px ) {
+
+  #month , #year {
+    font-size: 1rem;
+  }
+
+  #task-input {
+    height: 3vh;
+    width: 70vw;
+  }
+
+  header {
+    height: 8vh;
+  }
+
+  .buttons-container button {
+    border-radius: 3vw;
+    font-size: 2.5vw;
+    margin: 0 0.5vw;
+    height: 4.5vw;
+    width: 20vw;
+  }
+
+  .buttons-container {
+    margin-top: 1.5vh;
+    height: 4vh;
+  }
+
+
+  .calendar-container {
+    margin-top: 2vh;
+    height: 20vh;
+  }
+
+  .check-button , .delete-button , #btn-add {
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    height: 6vw;
+    margin: 1vw;
+    width: 6vw;
+  }
+
+  .check-button img , .delete-button img , #btn-add img {
+    height: 3vw;
+  }
+
+  .check-button:hover , .delete-button:hover , #btn-add:hover {
+    background-color: rgb(181, 208, 215);
+  }
+
+  .day {
+    font-size: 2.4vw;
+    height: 3.5vw;
+  }
+
+  .day:hover {
+    font-size: 3.3vw;
+    height: 3vw;
+  }
+
+  .days-container {
+    height: 15vh;
+  }
+
+  .input-appointment-container {
+    height: 3vh;
+  }
+
+  .input-appointment-container label {
+    width: 6vw;
+    font-size: 0.6rem;
+  }
+
+  .my-tasks {
+    margin: 0;
+    width: 100%;
+  }
+
+  .my-tasks span {
+    font-size: 3vw;
+  }
+
+  .my-tasks div div , #selected-type {
+    height: 1.5vh;
+    width: 1.5vh;
+  }
+
+
+  .month-container {
+    padding: 0.5vh;
+  }
+
+  .project-container {
+    font-size: 2vw;
+  }
+
+  .task:hover , #selected-type {
+    height: 2.5vh;
+    width: 2.5vh;
+  }
+
+
+  .title-type-tasks {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+  }
+
+  .type-tasks-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .title-type-tasks h3 , #appointment-title , #costum-h4 {
+    font-size: 3.5vw;
+  }
+
+  .week-days-container {
+    height: 3vh;
+    margin-top: 1vh;
+  }
+
+  .week-days li {
+    font-size: 2.5vw;
+    padding-bottom: 0;
+    margin-top: 1vh;
+  }
+
+}
+

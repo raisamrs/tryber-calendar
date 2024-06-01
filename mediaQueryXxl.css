@@ -1,0 +1,78 @@
+@media ( min-width : 1400px ) {
+
+  header {
+    background-color: green;
+    height: 12vh;
+  }
+
+  #task-input {
+    font-size: 1vw;
+    width: 60%;
+  }
+
+  #task-input::placeholder {
+    font-size: 1vw;
+  }
+
+  .buttons-container {
+    height: 5vh;
+  }
+
+  .buttons-container button {
+    height: 5vh;
+    font-size: 1.5vw;
+    width: 10vw;
+  }
+
+  .calendar-container {
+    height: 45%;
+    margin: 0;
+    margin-bottom: 2vh;
+  }
+
+  .check-button , .delete-button , #btn-add {
+    border-radius: 0.6vw;
+    height: 2vw;
+    margin: 1vw;
+    width: 2vw;
+  }
+
+  .check-button img , .delete-button img , #btn-add img {
+    height: 1.4vw;
+    width: 1.4vw;
+  }
+
+  .my-tasks span {
+    font-size: 1vw;
+  }
+
+  .day {
+    font-size: 1.5vw;
+    height: 3.8vh;
+  }
+
+  .day:hover {
+    font-size: 1.9vw;
+  }
+
+  .input-appointment-container {
+    width: 100%;
+  }
+
+  .input-appointment-container label {
+    font-size: 1vw;
+  }
+
+  .tasks-container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .title-type-tasks h3 , #appointment-title , #costum-h4 {
+    font-size: 1.3vw;
+  }
+
+  .week-days {
+    font-size: 1.5vw;
+  }
+}
