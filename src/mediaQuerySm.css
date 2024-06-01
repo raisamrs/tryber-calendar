@@ -4,6 +4,15 @@
     height: 7vh;
   }
 
+  #task-input {
+    font-size: 2.4vw;
+    max-height: 4vh;
+  }
+
+  #task-input:placeholder {
+    font-size: 2vw;
+  }
+
   .buttons-container button {
     border-radius: 3vw;
     font-size: 2.5vw;
@@ -59,6 +68,10 @@
 
   .exercises-container {
     border: 1px solid red;
+  }
+
+  .input-appointment-container {
+    height: 4.5vh;
   }
 
   .job-container {

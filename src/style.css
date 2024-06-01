@@ -87,7 +87,7 @@ ul #days {
   font-size: 3vw;
   text-align: center;
   min-height: 1rem;
-  max-height: 2rem;
+  max-height: 3rem;
 }
 
 #task-input::placeholder {
@@ -289,16 +289,13 @@ li span {
 }
 
 .tasks-container {
+  border: 1px dashed mediumorchid;
+  height: auto;
   margin: 2vh;
 }
 
 .task-list-container {
   border: 1px solid purple;
-}
-
-.tasks-container {
-  border: 1px dashed mediumorchid;
-  height: auto;
 }
 
 .tasks-container h3 , #appointment-title , #costum-h4 {
