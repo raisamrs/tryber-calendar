@@ -4,14 +4,23 @@
     height: 7vh;
   }
 
+  #appointment-title {
+    margin: 2rem 0;
+  }
+
+  #month , #year {
+    font-size: 1rem;
+  }
+
   #task-input {
-    font-size: 2.4vw;
-    max-height: 4vh;
-    width: 50%;
+    font-size: 1rem;
+    min-height: 2rem;
+    max-height: 3rem;
+    width: 20rem;
   }
 
   #task-input:placeholder {
-    font-size: 2vw;
+    font-size: 1rem;
   }
 
   .buttons-container button {
@@ -23,26 +32,23 @@
   }
 
   .buttons-container {
-    margin-top: 0.5vh;
-    height: 4vh;
+    margin: 1rem 0;
+    height: 2.5rem;
   }
 
-  #month , #year {
-    font-size: 1rem;
-  }
 
   .calendar-container {
-    margin-top: 2vh;
-    height: 20vh;
+    height: 12rem;
+    margin: 1.5rem 0;
   }
 
   .check-button , .delete-button , #btn-add {
     border-radius: 1vh;
     display: flex;
     justify-content: center;
-    height: 6vw;
+    height: 2rem;
     margin: 1vw;
-    width: 6vw;
+    width: 2rem;
   }
 
   .check-button img , .delete-button img , #btn-add img {
@@ -80,22 +86,26 @@
   }
 
   .my-tasks div div , #selected-type {
-    height: 1.5vh;
-    width: 1.5vh;
+    height: 1.5rem;
+    width: 1.5rem;
   }
 
   .month-container {
-    padding: 0.5vh;
+    height: 4rem;
+    padding: 0.5rem;
   }
 
-  .task:active , #selected-type {
-    height: 2.5vh;
-    width: 2.5vh;
+  .task-input {
+    font-size: 1rem;
   }
 
   .task:hover , #selected-type {
-    height: 2.5vh;
-    width: 2.5vh;
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .task-list-container {
+    margin-top: 3rem;
   }
 
   .title-type-tasks h3 , #appointment-title , #costum-h4 {
@@ -107,7 +117,7 @@
     align-items: center;
     display: flex;
     justify-content: center;
-    width: 60%;
+    width: 100%;
   }
 
   .type-tasks-container {
