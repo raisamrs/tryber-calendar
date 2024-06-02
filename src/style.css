@@ -134,8 +134,6 @@ ul #days {
 
 #task-list li {
   align-items: center;
-
-  /*   border: 1px solid green; */
   display: flex;
   flex-direction: row-reverse;
   height: auto;
@@ -162,7 +160,6 @@ ul #days {
 
 .buttons-container button:hover {
   background-color: rgb(116, 118, 115);
-  border: 0.18rem solid rgb(16, 16, 16);
 }
 
 .calendar-container {
@@ -188,7 +185,7 @@ ul #days {
   margin: 1vw;
 }
 
-.check-button:hover , .delete-button:hover , #btn-add:hover {
+.check-button:hover , .delete-button:hover , #btn-add:hover , .select-holidays {
   background-color: rgb(181, 208, 215);
 }
 
@@ -208,8 +205,6 @@ ul #days {
 }
 
 .days-container {
-
-  /* border: 1px solid blue; */
   display: flex;
   flex-wrap: wrap;
   width: 72vw;
@@ -230,8 +225,6 @@ ul #days {
 }
 
 .input-appointment-container {
-
-  /*   border: 1px solid chartreuse; */
   width: 100%;
 }
 
@@ -296,10 +289,6 @@ li span {
   flex-direction: column;
 }
 
-.select-holidays {
-  background-color: rgb(136, 145, 155);
-}
-
 .selected-type-title-container {
   display: flex;
   flex-direction: row;
@@ -317,10 +306,6 @@ li span {
   height: auto;
   margin: 2vh;
 }
-
-/* .task-list-container {
-  border: 2px solid purple;
-} */
 
 .tasks-container h3 , #appointment-title , #costum-h4 , #list-title {
   color: rgb(102, 102, 102);
@@ -356,7 +341,7 @@ li span {
 }
 
 .unselect-holidays {
-  background-color: rgb(238, 238, 238);
+  background-color: transparent;
 }
 
 .week-days {
