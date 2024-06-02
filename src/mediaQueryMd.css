@@ -19,6 +19,10 @@
     height: 5.3vw;
   }
 
+  #task-input {
+    width: 30rem;
+  }
+
   .buttons-container {
     height: auto;
   }
