@@ -63,6 +63,10 @@
     height: 15vh;
   }
 
+  .input-container {
+    margin-top: 4vh;
+  }
+
   .input-appointment-container {
     height: 3vh;
   }

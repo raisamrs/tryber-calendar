@@ -11,7 +11,6 @@
 
   #task-input {
     font-size: 2vw;
-    width: 100%;
   }
 
   #task-input::placeholder {
@@ -46,6 +45,11 @@
     width: 2vw;
   }
 
+  .my-tasks {
+    margin: 0 2vw;
+    width: 80%;
+  }
+
   .my-tasks span {
     font-size: 1.6vw;
   }
@@ -65,8 +69,7 @@
   }
 
   .tasks-container {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 4vh 0;
   }
 
   .title-type-tasks {
@@ -76,17 +79,16 @@
     justify-content: center;
   }
 
-  .title-type-tasks h3 {
-    width: 60%;
+  .title-type-tasks h3 , #costum-h4 {
+    width: 100%;
   }
 
-  .title-type-tasks h3 , #appointment-title , #costum-h4 {
+  .title-type-tasks h3 , #appointment-title , #costum-h4 , #list-title {
     font-size: 1.8vw;
   }
 
-  .type-tasks-container , #selected-type-container {
-
-    /* border: 1px solid maroon; */
-    margin: 0 2vh;
+  .type-tasks-container {
+    border-right: 0;
   }
+
 }

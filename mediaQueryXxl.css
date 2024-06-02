@@ -5,6 +5,10 @@
     height: 12vh;
   }
 
+  #costum-h4 {
+    width: 100%;
+  }
+
   #task-input {
     font-size: 1vw;
     width: 60%;
@@ -63,13 +67,20 @@
     font-size: 1vw;
   }
 
-  .tasks-container {
-    margin-left: 0;
-    margin-right: 0;
+  .selected-type-title-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
   }
 
-  .title-type-tasks h3 , #appointment-title , #costum-h4 {
+  .title-type-tasks h3 , #appointment-title , #costum-h4 , #list-title {
     font-size: 1.3vw;
+  }
+
+  .type-tasks-container {
+    border-right: 0;
   }
 
   .week-days {
