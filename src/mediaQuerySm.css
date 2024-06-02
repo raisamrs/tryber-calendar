@@ -7,6 +7,7 @@
   #task-input {
     font-size: 2.4vw;
     max-height: 4vh;
+    width: 50%;
   }
 
   #task-input:placeholder {
@@ -62,8 +63,16 @@
     height: 12vh;
   }
 
+  .input-container {
+    margin-top: 4vh;
+  }
+
   .input-appointment-container {
     height: 4.5vh;
+  }
+
+  .my-tasks {
+    width: 90%;
   }
 
   .my-tasks span {

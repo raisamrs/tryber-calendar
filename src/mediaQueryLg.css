@@ -29,7 +29,7 @@
   }
 
   .check-button , .delete-button , #btn-add {
-    border-radius: 1.5vh;
+    border-radius: 1vh;
     height: 4vw;
     width: 4vw;
   }
@@ -83,7 +83,11 @@
     align-content: center;
     align-items: center;
     justify-content: center;
-    width: 50%;
+    width: 100%;
+  }
+
+  .type-tasks-container {
+    border: 0;
   }
 
 }

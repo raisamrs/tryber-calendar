@@ -51,11 +51,9 @@ ul {
 }
 
 #costum-h4 {
-
-  /* border: 1px solid saddlebrown; */
   margin-bottom: 3vh;
   text-align: center;
-  width: 80%;
+  width: 100%;
 }
 
 #days {
@@ -82,8 +80,6 @@ ul #days {
 }
 
 #selected-type-container {
-
-  /* border: 1px solid black; */
   display: flex;
   justify-content: start;
 }
@@ -103,6 +99,7 @@ ul #days {
   text-align: center;
   min-height: 1rem;
   max-height: 3rem;
+  width: auto;
 }
 
 #task-input::placeholder {
@@ -127,8 +124,6 @@ ul #days {
 }
 
 .week-days li {
-
-  /* border: 1px solid grey; */
   color: rgb(76, 127, 76);
   display: flex;
   flex: 0 0 calc(100% / 7);
@@ -152,8 +147,6 @@ ul #days {
 }
 
 .buttons-container {
-
-  /* border: 2px solid darkslategrey; */
   align-items: center;
   display: flex;
   justify-content: space-evenly;
@@ -173,8 +166,6 @@ ul #days {
 }
 
 .calendar-container {
-
-  /* border: 4px solid red; */
   height: 55%;
   margin-top: 5vh;
 }
@@ -193,8 +184,6 @@ ul #days {
 }
 
 .check-button img , .delete-button img , #btn-add img {
-
-  /* border: 1px solid red; */
   height: 4vw;
   margin: 1vw;
 }
@@ -204,8 +193,6 @@ ul #days {
 }
 
 .day {
-
-  /* border: 1px solid salmon; */
   box-sizing: border-box;
   align-items: center;
   display: flex;
@@ -242,14 +229,9 @@ ul #days {
   display: flex;
 }
 
-/* .input-container {
-  border: 1px solid darkorange;
-}
- */
-
 .input-appointment-container {
 
-  /* border: 1px solid chartreuse; */
+  /*   border: 1px solid chartreuse; */
   width: 100%;
 }
 
@@ -270,13 +252,10 @@ ul #days {
 }
 
 .my-tasks {
-
-  /* border: 3px solid goldenrod; */
   clear: both;
   cursor: pointer;
-  margin-left: 3vw;
   vertical-align: middle;
-  width: 80%;
+  width: 100%;
 }
 
 .my-tasks div div , #selected-type {
@@ -321,14 +300,20 @@ li span {
   background-color: rgb(136, 145, 155);
 }
 
+.selected-type-title-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
 .task:hover {
   height: 4.5vh;
   width: 4.5vh;
 }
 
 .tasks-container {
-
-  /* border: 2px dashed blue; */
   height: auto;
   margin: 2vh;
 }
@@ -337,7 +322,7 @@ li span {
   border: 2px solid purple;
 } */
 
-.tasks-container h3 , #appointment-title , #costum-h4 {
+.tasks-container h3 , #appointment-title , #costum-h4 , #list-title {
   color: rgb(102, 102, 102);
   font-size: 2.5vw;
   font-weight: 500;
@@ -346,8 +331,6 @@ li span {
 }
 
 .tasks-types-selected-container {
-
-  /* border: 4px solid rgb(26, 85, 21); */
   width: 100%;
 }
 
@@ -364,15 +347,11 @@ li span {
 }
 
 .title-type-tasks {
-
-  /*   border: 1px solid rgb(205, 50, 91); */
   margin-bottom: 3vh;
   width: 80%;
 }
 
 .title-type-tasks h3 {
-
-  /* border: 1px solid violet; */
   width: 100%;
 }
 
@@ -389,8 +368,6 @@ li span {
 }
 
 .week-days-container {
-
-  /* border: 1px solid hotpink; */
   align-items: center;
   display: flex;
   height: auto;
