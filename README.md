@@ -21,10 +21,6 @@ O **Tryber Calendar** é um calendário destinado aos alunos da Trybe, onde eles
 
 ![Observe o gif:](https://github.com/raisamrs/tryber-calendar/blob/main/src/images/tryber%20calendar-using%20task%20list.gif)
 
-## Demonstração:
-Observe o gif abaixo:
-
-
 
 ## Rodando localmente
 Você pode usar o [Visual Studio Code (vulgo VS Code)](https://code.visualstudio.com/download) e instalar a dependência [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer).
@@ -55,6 +51,19 @@ Você pode usar o [Visual Studio Code (vulgo VS Code)](https://code.visualstudio
 ## Versão Deploy:
 Acesse a aplicação em https://raisamrs.github.io/tryber-calendar/
 
-## Autora
+## Autores:
+- [@trybe](https://github.com/tryber)
 
 - [@raisamrs](https://www.github.com/raisamrs)
+
+
+## ⚠️ Observação:
+> [!NOTE]
+> A versão atual difere em algumas mudanças implementadas única e exclusivamente por mim em relação à proposta original do projeto. Abaixo, seguem elas:
+* inclusão dos tipos de tarefa: "trabalho", "lazer" e "outros";
+* inclusão do "tipo selecionado";
+* inclusão da atribuição dos tipos de tarefas às de "Minha listas de tarefas", bem como os botões "deletar" e "concluir";
+* inclusão do alerta: "Por favor, selecione uma tarefa antes de atribuir uma cor ao dia." para quando o usuário ainda não selecionou tipo de tarefa e clicou em algum dia do mês;
+* inclusão do alerta: "Por favor, selecione um tipo de tarefa!" para quando o usuário tenta adicionar uma tarefa à lista de tarefas sem ter selecionado algum tipo de tarefa;
+* Inclusão do alerta: "Por favor, insira uma tarefa!" para quando o usuário tenta inserir uma tarefa vazia;
+* limitação de 40 caracteres no input das tarefas.
