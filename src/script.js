@@ -179,7 +179,7 @@ daysOfMonth.forEach((day) => {
         day.style.color = 'rgb(119,119,119)';
       }
     } else {
-      alert('Por favor, selecione uma tarefa antes de atribuir uma cor.');
+      alert('Por favor, selecione uma tarefa antes de atribuir uma cor ao dia.');
     }
   });
 });
