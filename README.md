@@ -7,8 +7,9 @@ O **Tryber Calendar** é um calendário destinado aos alunos da Trybe, onde eles
 ## Como funciona:
 * Para ver os feriados e/ou as sextas-feiras do mês basta clicar nos botões *Feriados* e *Sexta-feira*, que eles serão destacados. 😉
 * Clicando num *Tipo da tarefa* de sua escolha, você pode aplicá-la nas datas que preferir.
-    >[!WARNING]
-    > Basta ficar de olho no *Tipo adicionado* e verificar se a bolinha mudou para a cor correspondente ao tipo de tarefa de sua escolha!
+
+> [!IMPORTANT]
+> Basta ficar de olho no *Tipo adicionado* e verificar se a bolinha mudou para a cor correspondente ao tipo de tarefa de sua escolha!
 
 * É possível criar uma lista de tarefas também! Cada tarefa pode ter, no máximo, 40 caracteres.  Depois de escrever uma nova tarefa, adicione-a (➕). Concluiu a tarefa? Basta clicar no (✔️) quando ela estiver concluída! Você também tem a opção de deletá-la (🗑️)
 
