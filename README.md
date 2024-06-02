@@ -6,17 +6,23 @@ O **Tryber Calendar** é um calendário destinado aos alunos da Trybe, onde eles
 
 ## Como funciona:
 * Para ver os feriados e/ou as sextas-feiras do mês basta clicar nos botões *Feriados* e *Sexta-feira*, que eles serão destacados. 😉
+  
+![Observe o gif:](https://github.com/raisamrs/tryber-calendar/blob/main/src/images/tryber%20calendar-holidays%20and%20fridays.gif)
+
 * Clicando num *Tipo da tarefa* de sua escolha, você pode aplicá-la nas datas que preferir.
+
 
 > [!IMPORTANT]
 > Basta ficar de olho no *Tipo adicionado* e verificar se a bolinha mudou para a cor correspondente ao tipo de tarefa de sua escolha!
 
+![Observe o gif:](https://github.com/raisamrs/tryber-calendar/blob/main/src/images/tryber%20calendar-applying%20type%20of%20task%20to%20a%20date.gif)
+
 * É possível criar uma lista de tarefas também! Cada tarefa pode ter, no máximo, 40 caracteres.  Depois de escrever uma nova tarefa, adicione-a (➕). Concluiu a tarefa? Basta clicar no (✔️) quando ela estiver concluída! Você também tem a opção de deletá-la (🗑️)
 
+![Observe o gif:](https://github.com/raisamrs/tryber-calendar/blob/main/src/images/tryber%20calendar-using%20task%20list.gif)
 
 ## Demonstração:
 Observe o gif abaixo:
-![Observe o gif:](https://github.com/raisamrs/pixels-art/blob/main/src/imgs/Pixels%20Art%20Demo.gif)
 
 
 
