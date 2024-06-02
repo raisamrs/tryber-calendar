@@ -2,12 +2,15 @@
 ===============	
 
 ## O que é?
-O **Tryber Calendar** é um calendário destinado aos alunos da Trybe, onde eles podem ver os feriados do mês, as sextas-feiras, marcar dias destinados a projetos, dias destinados a exercícios e ainda adicionar compromissos! Bem funcional pra quem tem uma rotina de estudos cheia, né?
+O **Tryber Calendar** é um calendário destinado aos alunos da Trybe, onde eles podem ver os feriados do mês, as sextas-feiras, marcar dias destinados a projetos, dias destinados a exercícios e ainda adicionar outros tipos de tarefas! Bem funcional pra quem tem uma rotina cheia, né?
 
 ## Como funciona:
- Ele já vem com 4 cores definidas, mas calma: sempre que clicar no botão *Gerar cores aleatórias*, você terá outras 4 novas cores para usar da forma que preferir!
+* Para ver os feriados e/ou as sextas-feiras do mês basta clicar nos botões *Feriados* e *Sexta-feira*, que eles serão destacados. 😉
+* Clicando num *Tipo da tarefa* de sua escolha, você pode aplicá-la nas datas que preferir.
+    >[!WARNING]
+    > Basta ficar de olho no *Tipo adicionado* e verificar se a bolinha mudou para a cor correspondente ao tipo de tarefa de sua escolha!
 
-Ah, e se você não gostou da sua arte ou quer fazer outra, é só clicar em *Limpar quadro*. ;)
+* É possível criar uma lista de tarefas também! Cada tarefa pode ter, no máximo, 40 caracteres.  Depois de escrever uma nova tarefa, adicione-a (➕). Concluiu a tarefa? Basta clicar no (✔️) quando ela estiver concluída! Você também tem a opção de deletá-la (🗑️)
 
 
 ## Demonstração:
@@ -48,5 +51,3 @@ Acesse a aplicação em https://raisamrs.github.io/tryber-calendar/
 ## Autora
 
 - [@raisamrs](https://www.github.com/raisamrs)
-
-
