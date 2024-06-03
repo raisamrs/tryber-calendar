@@ -66,4 +66,5 @@ Acesse a aplicação em https://raisamrs.github.io/tryber-calendar/
 * inclusão do alerta: "Por favor, selecione uma tarefa antes de atribuir uma cor ao dia." para quando o usuário ainda não selecionou tipo de tarefa e clicou em algum dia do mês;
 * inclusão do alerta: "Por favor, selecione um tipo de tarefa!" para quando o usuário tenta adicionar uma tarefa à lista de tarefas sem ter selecionado algum tipo de tarefa;
 * Inclusão do alerta: "Por favor, insira uma tarefa!" para quando o usuário tenta inserir uma tarefa vazia;
-* limitação de 40 caracteres no input das tarefas.
+* limitação de 40 caracteres no input das tarefas;
+* armazenamento da lista de tarefas e das datas destacas no local storage.
